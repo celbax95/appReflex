@@ -7,7 +7,8 @@ import bri.ServeurAmat;
 import bri.ServeurProg;
 
 public class BRiLaunch {
-	private final static int PORT_SERVICE = 3000;
+	private final static int PORT_PROG = 2000;
+	private final static int PORT_AMAT = 3000;
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
@@ -21,8 +22,8 @@ public class BRiLaunch {
 		System.out.println("A tout instant, en tapant le nom de la classe, vous pouvez l'intégrer");
 		System.out.println("Les clients se connectent au serveur 3000 pour lancer une activité");
 
-		new Thread(new ServeurProg(PORT_SERVICE)).start();
-		new Thread(new ServeurAmat(PORT_SERVICE)).start();
+		new Thread(new ServeurProg(PORT_PROG)).start();
+		new Thread(new ServeurAmat(PORT_AMAT)).start();
 		String tmp = "ftp://localhost:2121/class/";
 	}
 }
