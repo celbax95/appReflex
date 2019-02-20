@@ -3,7 +3,7 @@ package appli;
 import java.net.URLClassLoader;
 import java.util.Scanner;
 
-import bri.ServeurBRi;
+import bri.ServeurProg;
 import bri.ServiceRegistry;
 
 public class BRiLaunch {
@@ -21,7 +21,7 @@ public class BRiLaunch {
 		System.out.println("A tout instant, en tapant le nom de la classe, vous pouvez l'intégrer");
 		System.out.println("Les clients se connectent au serveur 3000 pour lancer une activité");
 
-		new Thread(new ServeurBRi(PORT_SERVICE)).start();
+		new Thread(new ServeurProg(PORT_SERVICE)).start();
 		String tmp = "ftp://localhost:2121/class/";
 		System.out.println("Le nom du ftp : " + tmp);
 		String ftpName = tmp;// clavier.nextLine();

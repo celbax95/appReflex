@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-class ServiceBRi implements Runnable {
+class ServiceProg implements Runnable {
 
 	private Socket client;
 
-	ServiceBRi(Socket socket) {
+	ServiceProg(Socket socket) {
 		client = socket;
 	}
 

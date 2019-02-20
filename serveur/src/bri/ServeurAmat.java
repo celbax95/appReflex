@@ -5,11 +5,11 @@ import java.io.*;
 import java.net.*;
 
 
-public class ServeurProg implements Runnable {
+public class ServeurAmat implements Runnable {
 	private ServerSocket listen_socket;
 	
 	// Cree un serveur TCP - objet de la classe ServerSocket
-	public ServeurProg(int port) {
+	public ServeurAmat(int port) {
 		try {
 			listen_socket = new ServerSocket(port);
 		} catch (IOException e) {
