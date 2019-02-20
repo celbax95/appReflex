@@ -3,8 +3,8 @@ package appli;
 import java.net.URLClassLoader;
 import java.util.Scanner;
 
+import bri.ServeurAmat;
 import bri.ServeurProg;
-import bri.ServiceRegistry;
 
 public class BRiLaunch {
 	private final static int PORT_SERVICE = 3000;
@@ -22,19 +22,7 @@ public class BRiLaunch {
 		System.out.println("Les clients se connectent au serveur 3000 pour lancer une activité");
 
 		new Thread(new ServeurProg(PORT_SERVICE)).start();
+		new Thread(new ServeurAmat(PORT_SERVICE)).start();
 		String tmp = "ftp://localhost:2121/class/";
-		System.out.println("Le nom du ftp : " + tmp);
-		String ftpName = tmp;// clavier.nextLine();
-
-		do {
-			try {
-				tmp = "examples.ServiceInversion";
-				System.out.println("Un nom de service : " + tmp);
-				String className = tmp;// clavier.next();
-				ServiceRegistry.addService(ftpName, className);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		} while (false);
 	}
 }
