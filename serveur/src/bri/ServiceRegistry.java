@@ -46,7 +46,7 @@ public class ServiceRegistry {
 		for (int i = 0; i < servicesClasses.size(); i++) {
 			try {
 				result += (i + 1) + " - " + servicesClasses.get(i).getMethod("toStringue").invoke(null, (Object[]) null)
-						+ "##";
+						+ "\n";
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
