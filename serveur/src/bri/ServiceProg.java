@@ -25,7 +25,7 @@ class ServiceProg implements Runnable {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
-			out.println(ServiceRegistry.toStringue() + "##Tapez le numéro de service désiré :");
+			out.println(ServiceRegistry.toStringue() + "\nEntrez le nom de la classe à ajouter :");
 			int choix = Integer.parseInt(in.readLine());
 
 			Class<?> c = null;
