@@ -25,9 +25,26 @@ class ServiceProg implements Runnable {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
-			out.println(ServiceRegistry.toStringue() + "\nEntrez le nom de la classe à ajouter :");
+			out.println("1 - Fournir un nouveau service \n"
+					+ "2 - Mettre a jour un service \n"
+					+ "3 - Changer adresse FTP \n"
+					+ "4 - Demarrer / arreter un service \n"
+					+ "5 - Desinstaller un service \n");
 			int choix = Integer.parseInt(in.readLine());
-
+			switch (choix){
+				case 1 : 
+					out.println("Entrez le nom de la classe a ajouter : ");
+					out.println("");
+					String className = "";
+					className = in.readLine();
+					if(className != "") {
+						//TODO serveur ftp propre à chaque programmeur
+						ServiceRegistry.addService("ftp://localhost:2121/class/", className);
+					}
+					break;
+					
+					
+			}
 			Class<?> c = null;
 			Object o = null;
 
