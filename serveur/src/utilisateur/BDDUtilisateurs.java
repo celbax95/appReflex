@@ -11,7 +11,7 @@ public class BDDUtilisateurs {
 		utilisateurs.add(new Utilisateur("test","test","ftp://localhost:2121/"));
 	}
 	
-	public Utilisateur connect(String login, String password) {
+	public static Utilisateur connect(String login, String password) {
 		for (Utilisateur u : utilisateurs) {
 			if (u.getLogin().equals(login) && u.getPassword().equals(password))
 				return u;

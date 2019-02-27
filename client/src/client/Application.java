@@ -23,13 +23,16 @@ class Application {
 	public static void main(String[] args) {
 		Socket s = null;
 		try {
-			s = new Socket(HOST, PORT_SERVICE);
 
+			BufferedReader clavier = new BufferedReader(new InputStreamReader(System.in));
+			System.out.print("1 - Serveur Programmeur \n2 - Serveur Amateur\n\nChoix : ");
+
+			s = new Socket(HOST, (clavier.readLine().equals("1")?2000:3000));
+			
 			BufferedReader sin = new BufferedReader(new InputStreamReader(s.getInputStream()));
 			PrintWriter sout = new PrintWriter(s.getOutputStream(), true);
-			BufferedReader clavier = new BufferedReader(new InputStreamReader(System.in));
 
-			System.out.println("Connecté au serveur " + s.getInetAddress() + ":" + s.getPort());
+			System.out.println("\nConnecté au serveur " + s.getInetAddress() + ":" + s.getPort());
 
 			String line;
 			while (true) {

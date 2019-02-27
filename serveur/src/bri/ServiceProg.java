@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import utilisateur.BDDUtilisateurs;
+import utilisateur.Utilisateur;
+
 class ServiceProg implements Runnable {
 
 	private Socket client;
@@ -19,16 +22,33 @@ class ServiceProg implements Runnable {
 		client.close();
 	}
 
-	@SuppressWarnings({ "rawtypes" })
 	@Override
 	public void run() {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
-			String ftp = "";
-			out.println("adresse ftp : ");
-			out.println("");
-			ftp = in.readLine();
+			
+			Utilisateur u = null;
+			do {
+				String login = "", password = "";
+				
+				out.println("##Login : ");
+				out.println("");
+				login = in.readLine();
+				out.println("Password : ");
+				out.println("");
+				password = in.readLine();
+				
+				u = BDDUtilisateurs.connect(login, password);
+				
+				if (u == null)
+					out.println("##Erreur de connexion !##");
+				
+			} while (u == null);
+			
+			out.println("##Connecte####Bienvenue " + u.getLogin() + "##");
+			out.println("Votre serveur FTP est " + u.getFtp() + "####");
+			
 			out.println("1 - Fournir un nouveau service ##"
 					+ "2 - Mettre a jour un service ##"
 					+ "3 - Changer adresse FTP ##"
@@ -46,7 +66,7 @@ class ServiceProg implements Runnable {
 					String className = "";
 					className = in.readLine();
 					if(className != "") {
-						ServiceRegistry.addService(ftp, className);
+						ServiceRegistry.addService(u.getFtp(), className);
 						out.println("Service ajoute");
 						out.println("");
 					}
