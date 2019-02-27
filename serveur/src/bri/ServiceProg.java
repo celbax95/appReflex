@@ -27,39 +27,32 @@ class ServiceProg implements Runnable {
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 			String ftp = "";
 			out.println("adresse ftp : ");
+			out.println("");
 			ftp = in.readLine();
-			out.println("1 - Fournir un nouveau service \n"
-					+ "2 - Mettre a jour un service \n"
-					+ "3 - Changer adresse FTP \n"
-					+ "4 - Demarrer / arreter un service \n"
-					+ "5 - Desinstaller un service \n");
+			out.println("1 - Fournir un nouveau service ##"
+					+ "2 - Mettre a jour un service ##"
+					+ "3 - Changer adresse FTP ##"
+					+ "4 - Demarrer / arreter un service ##"
+					+ "5 - Desinstaller un service ####");
+			
+			out.println("Choix : ");
+			out.println("");
+			
 			int choix = Integer.parseInt(in.readLine());
 			switch (choix){
 				case 1 : 
-					out.println("Entrez le nom de la classe a ajouter : ");
+					out.println("##Entrez le nom de la classe a ajouter : ");
 					out.println("");
 					String className = "";
 					className = in.readLine();
 					if(className != "") {
 						ServiceRegistry.addService(ftp, className);
+						out.println("Service ajoute");
+						out.println("");
 					}
 					break;
 					
 					
-			}
-			Class<?> c = null;
-			Object o = null;
-
-			// instancier le service numéro "choix" en lui passant la socket "client"
-			// invoquer run() pour cette instance ou la lancer dans un thread à part
-			try {
-
-				c = (Class) (o = ServiceRegistry.getServiceClass(choix));
-				o = c.getConstructor(Socket.class).newInstance(client);
-				c.getMethod("run").invoke(o, (Object[]) null);
-
-			} catch (Exception e) {
-				e.printStackTrace();
 			}
 
 		} catch (IOException e) {

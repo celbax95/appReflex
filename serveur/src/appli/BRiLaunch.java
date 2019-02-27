@@ -24,6 +24,7 @@ public class BRiLaunch {
 
 		new Thread(new ServeurProg(PORT_PROG)).start();
 		new Thread(new ServeurAmat(PORT_AMAT)).start();
-		String tmp = "ftp://localhost:2121/class/";
+		String tmp = "ftp://localhost:2121/";
+		//examples.ServiceInversion
 	}
 }

@@ -35,11 +35,10 @@ class Application {
 			while (true) {
 				line = sin.readLine();
 
-				while (line != "") {
-					System.out.println(line);
+				while (!line.equals("")) {
+					System.out.print(line.replaceAll("##", "\n"));
 					line = sin.readLine();
 				}
-
 				sout.println(clavier.readLine());
 			}
 

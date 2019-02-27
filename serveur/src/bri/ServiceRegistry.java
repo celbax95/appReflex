@@ -42,11 +42,11 @@ public class ServiceRegistry {
 
 	// liste les activités présentes
 	public static String toStringue() {
-		String result = "Activités présentes :\n";
+		String result = "Activités présentes :####";
 		for (int i = 0; i < servicesClasses.size(); i++) {
 			try {
 				result += (i + 1) + " - " + servicesClasses.get(i).getMethod("toStringue").invoke(null, (Object[]) null)
-						+ "\n";
+						+ "##";
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
