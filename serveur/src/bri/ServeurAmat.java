@@ -23,7 +23,7 @@ public class ServeurAmat implements Runnable {
 	public void run() {
 		try {
 			while(true)
-				new ServiceProg(listen_socket.accept()).start();
+				new ServiceAmat(listen_socket.accept()).start();
 		}
 		catch (IOException e) { 
 			try {this.listen_socket.close();} catch (IOException e1) {}
