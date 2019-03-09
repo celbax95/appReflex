@@ -2,10 +2,42 @@ package examples;
 
 import java.io.*;
 import java.net.*;
+import java.util.HashMap;
+import java.util.Map;
 
 import bri.Service;
 
 public class SerciceXML implements Service {
+
+	private class Balise {
+		private String name;
+		private Map<String, String> inners;
+		private Map<String, String> attributes;
+		private Balise upper;
+
+		public Balise(String name, Balise upper) {
+			this.name = name;
+			this.upper = upper;
+			this.inners = new HashMap<>();
+			this.attributes = new HashMap<>();
+		}
+
+		public Map<String, String> getAttributes() {
+			return attributes;
+		}
+
+		public Map<String,String> getInners() {
+			return inners;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public Balise getUpper() {
+			return upper;
+		}
+	}
 
 	private final Socket client;
 
@@ -32,11 +64,10 @@ public class SerciceXML implements Service {
 		client.close();
 		}
 		catch (IOException e) {
-			//Fin du service d'inversion
 		}
 	}
 
 	public static String toStringue() {
-		return "Inversion de texte";
+		return "Analyse XML";
 	}
 }
