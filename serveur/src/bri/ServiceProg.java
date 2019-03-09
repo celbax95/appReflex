@@ -27,52 +27,57 @@ class ServiceProg implements Runnable {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
-			
+
 			Utilisateur u = null;
 			do {
 				String login = "", password = "";
-				
+
 				out.println("##Login : ");
 				out.println("");
 				login = in.readLine();
+				login = "test";
 				out.println("Password : ");
 				out.println("");
 				password = in.readLine();
-				
+				password = "test";
+
 				u = BDDUtilisateurs.connect(login, password);
-				
+
 				if (u == null)
 					out.println("##Erreur de connexion !##");
-				
+
 			} while (u == null);
-			
+
 			out.println("##Connecte####Bienvenue " + u.getLogin() + "##");
 			out.println("Votre serveur FTP est " + u.getFtp() + "####");
-			
+
 			out.println("1 - Fournir un nouveau service ##"
 					+ "2 - Mettre a jour un service ##"
 					+ "3 - Changer adresse FTP ##"
 					+ "4 - Demarrer / arreter un service ##"
 					+ "5 - Desinstaller un service ####");
-			
+
 			out.println("Choix : ");
 			out.println("");
-			
-			int choix = Integer.parseInt(in.readLine());
+
+			// int choix = Integer.parseInt(in.readLine());
+			in.readLine();
+			int choix = 1;
 			switch (choix){
-				case 1 : 
-					out.println("##Entrez le nom de la classe a ajouter : ");
+			case 1 :
+				out.println("##Entrez le nom de la classe a ajouter : ");
+				out.println("");
+				String className = "";
+				className = in.readLine();
+				className = "examples.ServiceXML";
+				if(className != "") {
+					ServiceRegistry.addService(u.getFtp(), className);
+					out.println("Service ajoute");
 					out.println("");
-					String className = "";
-					className = in.readLine();
-					if(className != "") {
-						ServiceRegistry.addService(u.getFtp(), className);
-						out.println("Service ajoute");
-						out.println("");
-					}
-					break;
-					
-					
+				}
+				break;
+
+
 			}
 
 		} catch (IOException e) {

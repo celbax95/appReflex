@@ -4,14 +4,15 @@ import java.io.*;
 import java.net.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import bri.Service;
 
-public class SerciceXML implements Service {
+public class ServiceXML implements Service {
 
 	private class Balise {
 		private String name;
-		private Map<String, String> inners;
+		private Map<String, Balise> inners;
 		private Map<String, String> attributes;
 		private Balise upper;
 
@@ -26,7 +27,7 @@ public class SerciceXML implements Service {
 			return attributes;
 		}
 
-		public Map<String,String> getInners() {
+		public Map<String, Balise> getInners() {
 			return inners;
 		}
 
@@ -41,8 +42,13 @@ public class SerciceXML implements Service {
 
 	private final Socket client;
 
-	public SerciceXML(Socket socket) {
+	public ServiceXML(Socket socket) {
 		client = socket;
+	}
+
+	private Balise analyseXML(String file, Balise balise) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -52,18 +58,28 @@ public class SerciceXML implements Service {
 
 	@Override
 	public void run() {
-		try {BufferedReader in = new BufferedReader (new InputStreamReader(client.getInputStream ( )));
-		PrintWriter out = new PrintWriter (client.getOutputStream ( ), true);
+		try {
+			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
-		out.println("##Tapez le nom du fichier XML à analyser : ");
+			out.println("##Tapez le path du fichier XML à analyser (FTP compris) : ");
 
-		out.println("");
+			out.println("");
 
-		String fileName = in.readLine();
+			String fileName = in.readLine();
 
-		client.close();
-		}
-		catch (IOException e) {
+			URL u = new URL(fileName);
+			Scanner sc = new Scanner(u.openStream());
+			String file = "";
+
+			while (sc.hasNextLine()) {
+				file += sc.nextLine();
+			}
+
+			Balise b = analyseXML(file, new Balise("root", null));
+
+			client.close();
+		} catch (IOException e) {
 		}
 	}
 
