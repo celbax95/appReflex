@@ -20,7 +20,7 @@ public class ServiceRegistry {
 	// un Vector pour cette gestion est pratique
 
 	// ajoute une classe de service après contrôle de la norme BLTi
-	public static void addService(String ftpURL, String packageName) {
+	public static boolean addService(String ftpURL, String packageName) {
 		try {
 			URLClassLoader urlcl = new URLClassLoader(new URL[] { new URL(ftpURL) });
 
@@ -32,6 +32,7 @@ public class ServiceRegistry {
 					m.invoke(null, ftpURL);
 					servicesClasses.add(c);
 					System.out.println("Service ajouté !");
+					return true;
 				} catch (Exception e) {
 					System.err.println("Mauvais chargement du service !");
 				}
@@ -39,6 +40,7 @@ public class ServiceRegistry {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return false;
 	}
 
 	// renvoie la classe de service (numService -1)
@@ -66,7 +68,7 @@ public class ServiceRegistry {
 		boolean tmp = Service.class.isAssignableFrom(c);
 
 		if (!tmp) {
-			System.out.println("La classe n'a pas l'interface Service");
+			System.out.println("\nLa classe n'a pas l'interface Service");
 			return tmp;
 		}
 
@@ -75,14 +77,14 @@ public class ServiceRegistry {
 		tmp = !Modifier.isAbstract(mod);
 
 		if (!tmp) {
-			System.out.println("La classe est abstract");
+			System.out.println("\nLa classe est abstract");
 			return tmp;
 		}
 
 		try {
 			c.getConstructor(Socket.class);
 		} catch (Exception e) {
-			System.out.println("Pas de constructeur avec un parametre socket");
+			System.out.println("\nPas de constructeur avec un parametre socket");
 		}
 
 		Field[] flds = c.getDeclaredFields();
@@ -92,14 +94,14 @@ public class ServiceRegistry {
 				tmp = true;
 		}
 		if (!tmp) {
-			System.out.println("Pas d'attribut private final socket");
+			System.out.println("\nPas d'attribut private final socket");
 			return tmp;
 		}
 
 		try {
 			c.getMethod("toStringue");
 		} catch (Exception e) {
-			System.out.println("Pas de methode toStringue");
+			System.out.println("\nPas de methode toStringue");
 			return false;
 		}
 		try {
@@ -114,7 +116,7 @@ public class ServiceRegistry {
 				throw new Exception();
 			}
 		} catch (Exception e) {
-			System.out.println("Pas de methode init avec parametre String pouvant lever une Exception");
+			System.out.println("\nPas de methode init avec parametre String pouvant lever une Exception");
 			return false;
 		}
 
