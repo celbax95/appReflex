@@ -51,34 +51,44 @@ class ServiceProg implements Runnable {
 			out.println("##Connecte####Bienvenue " + u.getLogin() + "##");
 			out.println("Votre serveur FTP est " + u.getFtp() + "####");
 
-			out.println("1 - Fournir un nouveau service ##"
-					+ "2 - Mettre a jour un service ##"
-					+ "3 - Changer adresse FTP ##"
-					+ "4 - Demarrer / arreter un service ##"
-					+ "5 - Desinstaller un service ####");
+			boolean exit = false;
+			do {
 
-			out.println("Choix : ");
-			out.println("");
+				out.println("1 - Fournir un nouveau service##" + "2 - Mettre a jour un service##"
+						+ "3 - Changer adresse FTP##" + "4 - Demarrer / arreter un service##"
+						+ "5 - Desinstaller un service##" + "6 - Deconnexion####");
 
-			// int choix = Integer.parseInt(in.readLine());
-			in.readLine();
-			int choix = 1;
-			switch (choix){
-			case 1 :
-				out.println("##Entrez le nom du package a ajouter : ");
+				out.println("Choix : ");
 				out.println("");
-				String className = "";
-				className = in.readLine();
-				className = "inv";
-				if(className != "") {
-					ServiceRegistry.addService(u.getFtp(), className);
-					out.println("Service ajoute");
+
+				int choix = 0;
+				do {
+					try {
+						choix = Integer.parseInt(in.readLine());
+					} catch (Exception e) {
+						continue;
+					}
+				} while (false);
+				//				in.readLine();
+				//				int choix = 1;
+				switch (choix){
+				case 1 :
+					out.println("##Entrez le nom du package a ajouter : ");
 					out.println("");
+					String className = "";
+					className = in.readLine();
+					className = "inv";
+					if(className != "") {
+						ServiceRegistry.addService(u.getFtp(), className);
+						out.println("##Service ajoute####");
+					}
+					break;
+				default:
+					exit = true;
+					out.println("EXIT0");
 				}
-				break;
 
-
-			}
+			} while (!exit);
 
 		} catch (IOException e) {
 			// Fin du service
