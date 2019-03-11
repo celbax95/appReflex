@@ -20,28 +20,29 @@ public class Main implements Service {
 
 	@Override
 	public void run() {
-		try {BufferedReader in = new BufferedReader (new InputStreamReader(client.getInputStream ( )));
-		PrintWriter out = new PrintWriter (client.getOutputStream ( ), true);
+		try {
+			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+			PrintWriter out = new PrintWriter (client.getOutputStream ( ), true);
 
-		out.println("##Tapez un texte à inverser : ");
+			out.println("##Tapez un texte à inverser : ");
 
-		out.println("");
+			out.println("");
 
-		String line = in.readLine();
+			String line = in.readLine();
 
-		String invLine = new String (new StringBuffer(line).reverse());
+			String invLine = new String (new StringBuffer(line).reverse());
 
-		out.println("##" + invLine);
-		out.println("");
-
-		client.close();
-		}
-		catch (IOException e) {
-			//Fin du service d'inversion
+			out.println("##" + invLine + "##");
+		} catch (IOException e) {
+			try {
+				client.close();
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
 		}
 	}
 
-	public static void init(String url) {
+	public static void init(String url) throws Exception {
 
 	}
 

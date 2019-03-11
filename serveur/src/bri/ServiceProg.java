@@ -61,14 +61,16 @@ class ServiceProg implements Runnable {
 				out.println("Choix : ");
 				out.println("");
 
+				boolean b = false;
 				int choix = 0;
-				do {
+				while (!b) {
 					try {
 						choix = Integer.parseInt(in.readLine());
+						b = true;
 					} catch (Exception e) {
-						continue;
+						out.println("");
 					}
-				} while (false);
+				}
 				//				in.readLine();
 				//				int choix = 1;
 				switch (choix){

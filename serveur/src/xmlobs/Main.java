@@ -10,36 +10,9 @@ import bri.Service;
 
 public class Main implements Service {
 
-	private class Balise {
-		private String name;
-		private Map<String, Balise> inners;
-		private Map<String, String> attributes;
-		private Balise upper;
+	private static String baliseClassName = "Balise";
 
-		public Balise(String name, Balise upper) {
-			this.name = name;
-			this.upper = upper;
-			this.inners = new HashMap<>();
-			this.attributes = new HashMap<>();
-		}
-
-		public Map<String, String> getAttributes() {
-			return attributes;
-		}
-
-		public Map<String, Balise> getInners() {
-			return inners;
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public Balise getUpper() {
-			return upper;
-		}
-	}
-
+	private static Class<?> balise;
 	private final Socket client;
 
 	public Main(Socket socket) {
@@ -47,7 +20,6 @@ public class Main implements Service {
 	}
 
 	private Balise analyseXML(String file, Balise balise) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -84,7 +56,14 @@ public class Main implements Service {
 	}
 
 	public static void init(String path) {
+		try {
+			URLClassLoader cl = new URLClassLoader(new URL[] { new URL(path) });
 
+			balise = cl.loadClass(Main.class.getPackage().getName() + "." + baliseClassName);
+			System.out.println("LOADED");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static String toStringue() {

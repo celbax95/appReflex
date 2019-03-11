@@ -25,32 +25,48 @@ class ServiceAmat implements Runnable {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
-			out.println(ServiceRegistry.toStringue() + "##Tapez le numéro de service désiré : ");
-			out.println("");
-			int choix = 0;
-			do {
-				try {
-					choix = Integer.parseInt(in.readLine());
-				} catch (Exception e) {
+
+			boolean exit = false;
+			while (!exit) {
+
+				out.println("##" + ServiceRegistry.toStringue()
+				+ "##Tapez le numéro de service désiré (0 : Deconnexion): ");
+				out.println("");
+
+				boolean b = false;
+				int choix = 0;
+				while (!b) {
+					try {
+						choix = Integer.parseInt(in.readLine());
+						b = true;
+					} catch (Exception e) {
+						out.println("");
+					}
+				}
+
+				if (choix == 0) {
+					out.println("EXIT0");
+					exit = true;
 					continue;
 				}
-			} while (false);
 
-			Class<?> c = null;
-			Object o = null;
+				Class<?> c = null;
+				Object o = null;
 
-			// instancier le service numéro "choix" en lui passant la socket "client"
-			// invoquer run() pour cette instance ou la lancer dans un thread à part
-			try {
+				// instancier le service numéro "choix" en lui passant la socket "client"
+				// invoquer run() pour cette instance ou la lancer dans un thread à part
+				try {
+					c = (Class) (o = ServiceRegistry.getServiceClass(choix));
+					o = c.getConstructor(Socket.class).newInstance(client);
+					c.getMethod("run").invoke(o, (Object[]) null);
 
-				c = (Class) (o = ServiceRegistry.getServiceClass(choix));
-				o = c.getConstructor(Socket.class).newInstance(client);
-				c.getMethod("run").invoke(o, (Object[]) null);
+					out.println("##-- Fin du Service --##");
 
-			} catch (Exception e) {
-				e.printStackTrace();
+				} catch (Exception e) {
+					out.println("Choix invalide####");
+				}
+
 			}
-
 		} catch (IOException e) {
 			// Fin du service
 		}

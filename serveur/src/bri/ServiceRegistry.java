@@ -1,6 +1,7 @@
 package bri;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.net.Socket;
 import java.net.URL;
@@ -26,11 +27,15 @@ public class ServiceRegistry {
 			Class<?> c = urlcl.loadClass(cn + ".Main");
 
 			if (verif(c)) {
-				servicesClasses.add(c);
-				c.getMethod("init", String.class).invoke(null, ftpURL);
-				System.out.println("Service ajouté !");
+				Method m = c.getMethod("init", String.class);
+				try {
+					m.invoke(null, ftpURL);
+					servicesClasses.add(c);
+					System.out.println("Service ajouté !");
+				} catch (Exception e) {
+					System.err.println("Mauvais chargement du service !");
+				}
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -46,7 +51,8 @@ public class ServiceRegistry {
 		String result = "Activités présentes :####";
 		for (int i = 0; i < servicesClasses.size(); i++) {
 			try {
-				result += (i + 1) + " - " + servicesClasses.get(i).getMethod("toStringue").invoke(null, (Object[]) null)
+				result += "    " + (i + 1) + " - "
+						+ servicesClasses.get(i).getMethod("toStringue").invoke(null, (Object[]) null)
 						+ "##";
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -97,9 +103,18 @@ public class ServiceRegistry {
 			return false;
 		}
 		try {
-			c.getMethod("init", String.class);
+			boolean hasExceptionThrown = false;
+			for (Class<?> e : c.getMethod("init", String.class).getExceptionTypes()) {
+				if (e == Exception.class) {
+					hasExceptionThrown = true;
+					break;
+				}
+			}
+			if (!hasExceptionThrown) {
+				throw new Exception();
+			}
 		} catch (Exception e) {
-			System.out.println("Pas de methode init avec parametre String");
+			System.out.println("Pas de methode init avec parametre String pouvant lever une Exception");
 			return false;
 		}
 
