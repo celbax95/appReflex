@@ -1,6 +1,7 @@
 package xmlobs;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 import java.net.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,20 +20,90 @@ public class Main implements Service {
 		client = socket;
 	}
 
-	private Object analyse(String file) {
+	private Object[] analyse(String file, Object b) {
 		try {
-			Object b = balise.getConstructor(String.class, balise).newInstance("FILE", null);
+			if (b == null)
+				file = "<FILE>" + file + "</FILE>";
 
-			file = file.trim();
+			int inf = 0, sup = 0, spa = 0, ssup = 0, ind = 0;
 
+			inf = file.indexOf("<");
+			spa = file.indexOf(" ");
+			sup = file.indexOf(">");
+			ssup = file.indexOf("/>");
 
+			if (inf > sup || inf > ssup)
+				System.out.println("ERREUR");
+
+			// Get smaller
+			ind = sup < spa ? sup : spa;
+			ind = ind < ssup ? ind : ssup;
+
+			String name = file.substring(inf + 1, ind);
+			assert (file.matches(".*<\\/ *balise *.*"));
+
+			b = balise.getConstructor(String.class, balise).newInstance(name, b);
+
+			@SuppressWarnings("unchecked")
+			Map<String, String> attr = (Map<String, String>) balise.getMethod("getAttributes").invoke(b,
+					(Object[]) null);
+			@SuppressWarnings("unchecked")
+			Map<String, Object> inn = (Map<String, Object>) balise.getMethod("getInners").invoke(b, (Object[]) null);
+
+			file = file.substring(ind);
+
+			boolean bool = (spa < sup && spa < ssup);
+			while (bool) {
+				file = file.trim();
+
+				inf = 0;
+				ind = file.indexOf("=\"");
+				String attrName = file.substring(inf, ind);
+
+				file = file.substring(ind + 2);
+				inf = 0;
+				ind = file.indexOf("\"");
+				String value = file.substring(inf, ind);
+
+				attr.put(attrName, value);
+
+				file = file.substring(ind + 1).trim();
+
+				sup = file.indexOf(">");
+				ssup = file.indexOf("/>");
+
+				if (sup == 0 || ssup == 0)
+					bool = false;
+			}
+
+			if (sup < ssup) {
+				file = file.substring(1).trim();
+				while (file.indexOf("</") != 0) {
+
+					inf = file.indexOf("<");
+
+					if (inf == 0) {
+						Object[] ret = analyse(file, b);
+						file = (String) ret[1];
+						inn.put(name, ret[0]);
+					} else {
+						String content = file.substring(0, inf).trim();
+						file = file.substring(inf);
+					}
+				}
+				sup = file.indexOf(">");
+				if (file.substring(2, sup).trim().equals(name)) {
+					file = file.substring(sup + 1);
+					return new Object[] { b, file };
+				}
+			} else if (ssup < sup) {
+				file = file.trim().substring(2);
+				return new Object[] { b, file };
+			}
 
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		return null;
-	}
-
-	private Balise analyseXML(String file, Balise balise) {
 		return null;
 	}
 
@@ -48,7 +119,6 @@ public class Main implements Service {
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
 			out.println("##Tapez le path du fichier XML à analyser (FTP compris) : ");
-
 			out.println("");
 
 			String fileName = in.readLine();
@@ -58,17 +128,21 @@ public class Main implements Service {
 			Scanner sc = new Scanner(u.openStream());
 			String file = "";
 
-			while (sc.hasNextLine()) {
+			while (sc.hasNextLine())
 				file += sc.nextLine();
+
+			Object b = null;
+			try {
+				b = balise.getConstructor(String.class, balise).newInstance("FILE", null);
+			} catch (Exception e) {
 			}
 
-			file = file.replaceAll("\t", "");
+			Object balises = analyse(file.replaceAll("\t", "").trim(), null)[0];
 
-			Object balises = analyse(file);
+			out.println("##");
+			out.println(balises.toString().replaceAll("\n", "##"));
+			out.println("##");
 
-			System.out.println(file);
-
-			client.close();
 		} catch (IOException e) {
 		}
 	}

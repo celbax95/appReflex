@@ -46983,3 +46983,1748 @@ java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
 [ INFO] 2019-03-11 13:38:38,335 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
 
 [ INFO] 2019-03-11 13:38:38,876 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 18:28:43,957 [] [] Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@deb6432: display name [org.springframework.context.support.FileSystemXmlApplicationContext@deb6432]; startup date [Mon Mar 11 18:28:43 CET 2019]; root of context hierarchy
+[ INFO] 2019-03-11 18:28:44,164 [] [] Loading XML bean definitions from file [C:\Users\Loïc\Desktop\appReflex\FTP\res\conf\ftpd-typical.xml]
+[ INFO] 2019-03-11 18:28:45,451 [] [] Bean factory for application context [org.springframework.context.support.FileSystemXmlApplicationContext@deb6432]: org.springframework.beans.factory.support.DefaultListableBeanFactory@482f8f11
+[ INFO] 2019-03-11 18:28:45,479 [] [] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@482f8f11: defining beans [org.apache.ftpserver.listener.ListenerFactory#0,org.apache.ftpserver.usermanager.PropertiesUserManagerFactory#0,org.apache.ftpserver.FtpServerFactory#0,myServer]; root of factory hierarchy
+[ INFO] 2019-03-11 18:28:45,956 [] [] FTP server started
+[ INFO] 2019-03-11 18:48:09,644 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 18:48:09,648 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 18:48:09,656 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 18:48:09,657 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 18:48:09,659 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 18:48:09,660 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 18:48:09,664 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 18:48:09,664 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 18:48:09,664 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 18:48:09,665 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 18:48:09,666 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 18:48:09,668 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53132|)
+
+[ INFO] 2019-03-11 18:48:09,668 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 18:48:09,669 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53132
+[ INFO] 2019-03-11 18:48:09,670 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53133|)
+
+[ INFO] 2019-03-11 18:48:09,671 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 18:48:09,729 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 18:48:09,732 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53133
+[ INFO] 2019-03-11 18:48:09,732 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 18:48:09,732 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 18:48:10,206 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 18:59:19,430 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 18:59:19,431 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 18:59:19,432 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 18:59:19,433 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 18:59:19,433 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 18:59:19,433 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 18:59:19,434 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 18:59:19,434 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 18:59:19,434 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 18:59:19,435 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 18:59:19,435 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 18:59:19,436 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53156|)
+
+[ INFO] 2019-03-11 18:59:19,436 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 18:59:19,437 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53156
+[ INFO] 2019-03-11 18:59:19,438 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53157|)
+
+[ INFO] 2019-03-11 18:59:19,439 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 18:59:19,490 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 18:59:19,490 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53157
+[ INFO] 2019-03-11 18:59:19,491 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 18:59:19,491 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 18:59:20,034 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:01:24,674 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:01:24,674 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:01:24,675 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:01:24,676 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:01:24,680 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:01:24,680 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:01:24,681 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:01:24,681 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:01:24,681 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:01:24,682 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:01:24,682 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:01:24,683 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53161|)
+
+[ INFO] 2019-03-11 19:01:24,683 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:01:24,684 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53161
+[ INFO] 2019-03-11 19:01:24,685 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53162|)
+
+[ INFO] 2019-03-11 19:01:24,686 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:01:24,737 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:01:24,737 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53162
+[ INFO] 2019-03-11 19:01:24,737 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:01:24,737 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:01:25,207 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:03:24,582 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:03:24,582 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:03:24,583 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:03:24,584 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:03:24,585 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:03:24,585 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:03:24,586 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:03:24,586 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:03:24,586 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:03:24,587 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:03:24,587 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:03:24,588 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53169|)
+
+[ INFO] 2019-03-11 19:03:24,589 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:03:24,589 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53169
+[ INFO] 2019-03-11 19:03:24,589 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53170|)
+
+[ INFO] 2019-03-11 19:03:24,591 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:03:24,643 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:03:24,643 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53170
+[ INFO] 2019-03-11 19:03:24,643 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:03:24,643 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:03:25,104 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:04:57,998 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:04:57,999 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:04:58,000 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:04:58,001 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:04:58,002 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:04:58,002 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:04:58,002 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:04:58,002 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:04:58,002 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:04:58,003 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:04:58,003 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:04:58,004 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53181|)
+
+[ INFO] 2019-03-11 19:04:58,004 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:04:58,005 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53181
+[ INFO] 2019-03-11 19:04:58,006 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53182|)
+
+[ INFO] 2019-03-11 19:04:58,007 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:04:58,059 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:04:58,059 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53182
+[ INFO] 2019-03-11 19:04:58,059 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:04:58,059 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:05:00,552 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:07:13,197 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:07:13,198 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:07:13,199 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:07:13,200 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:07:13,200 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:07:13,200 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:07:13,201 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:07:13,201 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:07:13,201 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:07:13,202 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:07:13,203 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:07:13,204 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53189|)
+
+[ INFO] 2019-03-11 19:07:13,204 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:07:13,205 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53189
+[ INFO] 2019-03-11 19:07:13,206 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53190|)
+
+[ INFO] 2019-03-11 19:07:13,207 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:07:13,258 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:07:13,258 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53190
+[ INFO] 2019-03-11 19:07:13,258 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:07:13,259 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:07:13,724 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:08:11,245 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:08:11,246 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:08:11,247 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:08:11,248 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:08:11,248 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:08:11,249 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:08:11,249 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:08:11,249 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:08:11,249 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:08:11,251 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:08:11,251 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:08:11,252 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53195|)
+
+[ INFO] 2019-03-11 19:08:11,253 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:08:11,253 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53195
+[ INFO] 2019-03-11 19:08:11,254 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53196|)
+
+[ INFO] 2019-03-11 19:08:11,255 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:08:11,306 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:08:11,306 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53196
+[ INFO] 2019-03-11 19:08:11,306 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:08:11,306 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:08:11,778 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:09:51,532 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:09:51,533 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:09:51,533 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:09:51,534 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:09:51,535 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:09:51,535 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:09:51,535 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:09:51,535 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:09:51,536 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:09:51,536 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:09:51,536 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:09:51,537 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53205|)
+
+[ INFO] 2019-03-11 19:09:51,537 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:09:51,538 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53205
+[ INFO] 2019-03-11 19:09:51,539 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53206|)
+
+[ INFO] 2019-03-11 19:09:51,541 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:09:51,593 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:09:51,593 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53206
+[ INFO] 2019-03-11 19:09:51,593 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:09:51,594 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:09:54,189 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:10:51,987 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:10:51,987 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:10:51,988 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:10:51,989 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:10:51,990 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:10:51,990 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:10:51,990 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:10:51,991 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:10:51,991 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:10:51,991 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:10:51,992 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:10:51,992 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53215|)
+
+[ INFO] 2019-03-11 19:10:51,992 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:10:51,993 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53215
+[ INFO] 2019-03-11 19:10:51,994 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53216|)
+
+[ INFO] 2019-03-11 19:10:51,995 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:10:52,046 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:10:52,046 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53216
+[ INFO] 2019-03-11 19:10:52,046 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:10:52,047 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:10:54,515 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:12:34,213 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:12:34,214 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:12:34,215 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:12:34,216 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:12:34,216 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:12:34,216 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:12:34,216 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:12:34,217 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:12:34,217 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:12:34,217 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:12:34,218 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:12:34,218 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53220|)
+
+[ INFO] 2019-03-11 19:12:34,218 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:12:34,219 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53220
+[ INFO] 2019-03-11 19:12:34,220 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53221|)
+
+[ INFO] 2019-03-11 19:12:34,222 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:12:34,273 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:12:34,273 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53221
+[ INFO] 2019-03-11 19:12:34,273 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:12:34,274 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:12:34,736 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:13:09,315 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:13:09,316 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:13:09,317 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:13:09,318 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:13:09,319 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:13:09,319 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:13:09,319 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:13:09,319 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:13:09,320 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:13:09,320 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:13:09,320 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:13:09,321 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53225|)
+
+[ INFO] 2019-03-11 19:13:09,321 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:13:09,321 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53225
+[ INFO] 2019-03-11 19:13:09,322 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53226|)
+
+[ INFO] 2019-03-11 19:13:09,323 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:13:09,376 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:13:09,376 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53226
+[ INFO] 2019-03-11 19:13:09,377 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:13:09,377 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:13:09,872 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:14:06,996 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:14:06,997 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:14:06,998 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:14:06,999 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:14:06,999 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:14:06,999 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:14:07,000 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:14:07,000 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:14:07,000 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:14:07,001 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:14:07,001 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:14:07,002 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53230|)
+
+[ INFO] 2019-03-11 19:14:07,003 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:14:07,003 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53230
+[ INFO] 2019-03-11 19:14:07,004 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53231|)
+
+[ INFO] 2019-03-11 19:14:07,005 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:14:07,056 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:14:07,056 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53231
+[ INFO] 2019-03-11 19:14:07,056 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:14:07,057 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:14:07,592 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:25:14,817 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:25:14,818 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:25:14,819 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:25:14,820 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:25:14,820 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:25:14,821 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:25:14,821 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:25:14,821 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:25:14,822 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:25:14,822 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:25:14,822 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:25:14,823 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53240|)
+
+[ INFO] 2019-03-11 19:25:14,823 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:25:14,823 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53240
+[ INFO] 2019-03-11 19:25:14,824 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53241|)
+
+[ INFO] 2019-03-11 19:25:14,825 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:25:14,877 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:25:14,877 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53241
+[ INFO] 2019-03-11 19:25:14,877 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:25:14,877 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:25:15,398 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:25:47,544 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:25:47,545 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:25:47,545 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:25:47,546 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:25:47,547 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:25:47,547 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:25:47,548 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:25:47,548 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:25:47,548 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:25:47,548 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:25:47,549 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:25:47,549 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53245|)
+
+[ INFO] 2019-03-11 19:25:47,549 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:25:47,550 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53245
+[ INFO] 2019-03-11 19:25:47,551 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53246|)
+
+[ INFO] 2019-03-11 19:25:47,552 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:25:47,603 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:25:47,603 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53246
+[ INFO] 2019-03-11 19:25:47,604 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:25:47,604 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 19:25:48,076 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:30:08,952 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:30:08,953 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:30:08,954 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:30:08,954 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:30:08,955 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:30:08,955 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:30:08,955 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:30:08,956 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:30:08,956 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:30:08,956 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:30:08,956 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:30:08,957 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53252|)
+
+[ INFO] 2019-03-11 19:30:08,957 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:30:08,958 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53252
+[ INFO] 2019-03-11 19:30:08,958 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53253|)
+
+[ INFO] 2019-03-11 19:30:08,960 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:30:09,011 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:30:09,011 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53253
+[ INFO] 2019-03-11 19:30:09,012 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:30:09,012 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 19:30:21,678 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 19:30:21,696 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 19:30:21,696 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 19:59:09,169 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 19:59:09,171 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 19:59:09,172 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 19:59:09,173 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 19:59:09,173 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 19:59:09,174 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 19:59:09,174 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 19:59:09,174 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 19:59:09,175 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 19:59:09,175 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 19:59:09,175 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 19:59:09,176 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53317|)
+
+[ INFO] 2019-03-11 19:59:09,176 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 19:59:09,177 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53317
+[ INFO] 2019-03-11 19:59:09,177 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53318|)
+
+[ INFO] 2019-03-11 19:59:09,179 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 19:59:09,231 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 19:59:09,231 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53318
+[ INFO] 2019-03-11 19:59:09,232 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 19:59:09,232 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 19:59:14,995 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 19:59:14,996 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 19:59:14,997 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:02:48,757 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:02:48,758 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:02:48,759 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:02:48,761 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:02:48,762 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:02:48,762 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:02:48,762 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:02:48,762 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:02:48,763 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:02:48,763 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:02:48,764 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:02:48,764 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53329|)
+
+[ INFO] 2019-03-11 20:02:48,764 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:02:48,765 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53329
+[ INFO] 2019-03-11 20:02:48,765 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53330|)
+
+[ INFO] 2019-03-11 20:02:48,766 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:02:48,817 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:02:48,817 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53330
+[ INFO] 2019-03-11 20:02:48,817 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:02:48,817 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:02:49,295 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:07:56,984 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:07:56,985 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:07:56,986 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:07:56,987 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:07:56,987 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:07:56,987 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:07:56,988 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:07:56,988 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:07:56,988 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:07:56,989 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:07:56,989 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:07:56,990 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53338|)
+
+[ INFO] 2019-03-11 20:07:56,990 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:07:56,991 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53338
+[ INFO] 2019-03-11 20:07:56,991 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53339|)
+
+[ INFO] 2019-03-11 20:07:56,992 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:07:57,045 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:07:57,045 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53339
+[ INFO] 2019-03-11 20:07:57,045 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:07:57,046 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:09:24,539 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:09:24,540 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:09:24,541 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:09:37,980 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:09:37,980 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:09:37,981 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:09:37,982 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:09:37,982 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:09:37,982 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:09:37,983 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:09:37,984 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:09:37,984 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:09:37,985 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:09:37,985 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:09:37,986 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53345|)
+
+[ INFO] 2019-03-11 20:09:37,986 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:09:37,987 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53345
+[ INFO] 2019-03-11 20:09:37,987 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53346|)
+
+[ INFO] 2019-03-11 20:09:37,989 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:09:38,041 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:09:38,041 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53346
+[ INFO] 2019-03-11 20:09:38,041 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:09:38,041 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:10:44,642 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:10:44,643 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:10:44,644 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:10:57,321 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:10:57,321 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:10:57,322 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:10:57,323 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:10:57,323 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:10:57,324 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:10:57,324 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:10:57,324 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:10:57,324 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:10:57,325 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:10:57,325 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:10:57,325 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53352|)
+
+[ INFO] 2019-03-11 20:10:57,326 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:10:57,326 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53352
+[ INFO] 2019-03-11 20:10:57,326 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53353|)
+
+[ INFO] 2019-03-11 20:10:57,328 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:10:57,379 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:10:57,379 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53353
+[ INFO] 2019-03-11 20:10:57,379 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:10:57,379 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:15:57,530 [anonymous] [127.0.0.1] IDLE
+[ INFO] 2019-03-11 20:15:57,531 [anonymous] [127.0.0.1] Session idle, closing
+[ INFO] 2019-03-11 20:15:57,531 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:17:35,729 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:17:35,729 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:17:35,730 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:17:35,731 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:17:35,732 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:17:35,732 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:17:35,732 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:17:35,733 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:17:35,733 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:17:35,733 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:17:35,733 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:17:35,734 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53363|)
+
+[ INFO] 2019-03-11 20:17:35,734 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:17:35,734 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53363
+[ INFO] 2019-03-11 20:17:35,735 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53364|)
+
+[ INFO] 2019-03-11 20:17:35,736 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:17:35,787 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:17:35,787 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53364
+[ INFO] 2019-03-11 20:17:35,787 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:17:35,787 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:17:36,277 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:19:22,445 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:19:22,446 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:19:22,447 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:19:22,448 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:19:22,448 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:19:22,448 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:19:22,449 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:19:22,449 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:19:22,449 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:19:22,450 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:19:22,450 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:19:22,451 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53371|)
+
+[ INFO] 2019-03-11 20:19:22,451 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:19:22,452 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53371
+[ INFO] 2019-03-11 20:19:22,456 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53372|)
+
+[ INFO] 2019-03-11 20:19:22,456 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:19:22,508 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:19:22,508 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53372
+[ INFO] 2019-03-11 20:19:22,508 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:19:22,508 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:19:51,444 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:19:51,445 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:19:51,445 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:20:05,428 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:20:05,429 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:20:05,429 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:20:05,430 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:20:05,431 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:20:05,431 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:20:05,431 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:20:05,432 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:20:05,432 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:20:05,432 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:20:05,433 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:20:05,433 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53378|)
+
+[ INFO] 2019-03-11 20:20:05,433 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:20:05,434 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53378
+[ INFO] 2019-03-11 20:20:05,435 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53379|)
+
+[ INFO] 2019-03-11 20:20:05,436 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:20:05,487 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:20:05,487 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53379
+[ INFO] 2019-03-11 20:20:05,487 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:20:05,487 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:21:16,744 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:21:16,745 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:21:16,746 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:21:25,980 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:21:25,981 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:21:25,982 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:21:25,982 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:21:25,983 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:21:25,983 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:21:25,983 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:21:25,984 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:21:25,984 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:21:25,984 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:21:25,985 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:21:25,985 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53386|)
+
+[ INFO] 2019-03-11 20:21:25,985 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:21:25,986 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53386
+[ INFO] 2019-03-11 20:21:25,987 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53387|)
+
+[ INFO] 2019-03-11 20:21:25,988 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:21:26,040 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:21:26,040 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53387
+[ INFO] 2019-03-11 20:21:26,040 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:21:26,040 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:23:38,619 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:23:38,620 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:23:38,621 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:23:47,773 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:23:47,773 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:23:47,774 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:23:47,775 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:23:47,776 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:23:47,776 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:23:47,776 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:23:47,777 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:23:47,777 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:23:47,777 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:23:47,778 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:23:47,778 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53394|)
+
+[ INFO] 2019-03-11 20:23:47,778 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:23:47,779 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53394
+[ INFO] 2019-03-11 20:23:47,779 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53395|)
+
+[ INFO] 2019-03-11 20:23:47,781 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:23:47,833 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:23:47,834 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53395
+[ INFO] 2019-03-11 20:23:47,834 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:23:47,835 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:25:10,892 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:25:10,892 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:25:10,893 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:25:22,169 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:25:22,169 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:25:22,170 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:25:22,171 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:25:22,171 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:25:22,171 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:25:22,172 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:25:22,172 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:25:22,172 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:25:22,173 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:25:22,173 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:25:22,174 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53403|)
+
+[ INFO] 2019-03-11 20:25:22,174 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:25:22,175 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53403
+[ INFO] 2019-03-11 20:25:22,175 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53404|)
+
+[ INFO] 2019-03-11 20:25:22,177 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:25:22,228 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:25:22,228 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53404
+[ INFO] 2019-03-11 20:25:22,228 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:25:22,228 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:28:21,407 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:28:21,408 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:28:21,409 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:28:28,951 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:28:28,952 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:28:28,952 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:28:28,953 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:28:28,954 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:28:28,954 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:28:28,954 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:28:28,954 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:28:28,955 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:28:28,955 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:28:28,955 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:28:28,956 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53411|)
+
+[ INFO] 2019-03-11 20:28:28,956 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:28:28,956 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53411
+[ INFO] 2019-03-11 20:28:28,957 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53412|)
+
+[ INFO] 2019-03-11 20:28:28,958 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:28:29,009 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:28:29,009 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53412
+[ INFO] 2019-03-11 20:28:29,009 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:28:29,009 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:28:29,485 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:28:55,739 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:28:55,740 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:28:55,740 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:28:55,741 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:28:55,742 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:28:55,742 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:28:55,742 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:28:55,742 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:28:55,742 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:28:55,743 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:28:55,743 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:28:55,744 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53418|)
+
+[ INFO] 2019-03-11 20:28:55,744 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:28:55,744 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53418
+[ INFO] 2019-03-11 20:28:55,745 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53419|)
+
+[ INFO] 2019-03-11 20:28:55,745 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:28:55,798 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:28:55,802 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53419
+[ INFO] 2019-03-11 20:28:55,802 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:28:55,802 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:29:02,806 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:29:02,807 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:29:02,807 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:29:34,016 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:29:34,017 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:29:34,018 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:29:34,019 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:29:34,019 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:29:34,019 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:29:34,019 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:29:34,019 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:29:34,020 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:29:34,020 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:29:34,020 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:29:34,021 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53425|)
+
+[ INFO] 2019-03-11 20:29:34,021 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:29:34,021 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53425
+[ INFO] 2019-03-11 20:29:34,022 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53426|)
+
+[ INFO] 2019-03-11 20:29:34,023 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:29:34,074 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:29:34,074 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53426
+[ INFO] 2019-03-11 20:29:34,074 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:29:34,074 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:30:36,378 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:30:45,446 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:30:45,447 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:30:45,448 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:30:45,448 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:30:45,449 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:30:45,449 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:30:45,449 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:30:45,449 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:30:45,450 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:30:45,450 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:30:45,450 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:30:45,451 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53432|)
+
+[ INFO] 2019-03-11 20:30:45,451 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:30:45,451 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53432
+[ INFO] 2019-03-11 20:30:45,452 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53433|)
+
+[ INFO] 2019-03-11 20:30:45,453 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:30:45,504 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:30:45,504 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53433
+[ INFO] 2019-03-11 20:30:45,504 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:30:45,504 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:31:15,154 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:31:27,767 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:31:27,767 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:31:27,768 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:31:27,769 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:31:27,769 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:31:27,769 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:31:27,770 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:31:27,770 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:31:27,770 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:31:27,770 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:31:27,771 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:31:27,771 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53439|)
+
+[ INFO] 2019-03-11 20:31:27,772 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:31:27,772 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53439
+[ INFO] 2019-03-11 20:31:27,772 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53440|)
+
+[ INFO] 2019-03-11 20:31:27,773 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:31:27,824 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:31:27,824 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53440
+[ INFO] 2019-03-11 20:31:27,824 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:31:27,824 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:31:48,807 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:31:48,808 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:31:48,809 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:31:58,937 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:31:58,937 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:31:58,938 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:31:58,939 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:31:58,940 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:31:58,940 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:31:58,940 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:31:58,940 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:31:58,940 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:31:58,941 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:31:58,941 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:31:58,942 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53446|)
+
+[ INFO] 2019-03-11 20:31:58,942 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:31:58,942 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53446
+[ INFO] 2019-03-11 20:31:58,946 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53447|)
+
+[ INFO] 2019-03-11 20:31:58,946 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:31:59,009 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:31:59,010 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53447
+[ INFO] 2019-03-11 20:31:59,010 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:31:59,010 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-11 20:36:25,593 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-11 20:36:25,594 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-11 20:36:25,595 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:37:41,945 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:37:41,946 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:37:41,947 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:37:41,948 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:37:41,948 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:37:41,949 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:37:41,949 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:37:41,949 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:37:41,949 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:37:41,949 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:37:41,950 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:37:41,951 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53467|)
+
+[ INFO] 2019-03-11 20:37:41,951 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:37:41,951 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53467
+[ INFO] 2019-03-11 20:37:41,951 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53468|)
+
+[ INFO] 2019-03-11 20:37:41,952 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:37:42,003 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:37:42,003 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53468
+[ INFO] 2019-03-11 20:37:42,003 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:37:42,003 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:42:42,157 [anonymous] [127.0.0.1] IDLE
+[ INFO] 2019-03-11 20:42:42,157 [anonymous] [127.0.0.1] Session idle, closing
+[ INFO] 2019-03-11 20:42:42,158 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:44:57,812 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:44:57,813 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:44:57,813 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:44:57,814 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:44:57,814 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:44:57,815 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:44:57,815 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:44:57,815 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:44:57,815 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:44:57,816 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:44:57,816 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:44:57,817 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53473|)
+
+[ INFO] 2019-03-11 20:44:57,817 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:44:57,817 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53473
+[ INFO] 2019-03-11 20:44:57,818 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53474|)
+
+[ INFO] 2019-03-11 20:44:57,819 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:44:57,871 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:44:57,872 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53474
+[ INFO] 2019-03-11 20:44:57,872 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:44:57,872 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:44:58,345 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:46:02,600 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:46:02,601 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:46:02,601 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:46:02,602 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:46:02,603 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:46:02,603 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:46:02,603 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:46:02,603 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:46:02,603 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:46:02,603 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:46:02,604 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:46:02,604 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53478|)
+
+[ INFO] 2019-03-11 20:46:02,604 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:46:02,604 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53478
+[ INFO] 2019-03-11 20:46:02,605 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53479|)
+
+[ INFO] 2019-03-11 20:46:02,606 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:46:02,657 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:46:02,657 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53479
+[ INFO] 2019-03-11 20:46:02,657 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:46:02,657 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:46:03,125 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:55:40,415 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:55:40,415 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:55:40,416 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:55:40,417 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:55:40,417 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:55:40,417 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:55:40,418 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:55:40,418 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:55:40,418 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:55:40,419 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:55:40,419 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:55:40,419 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53506|)
+
+[ INFO] 2019-03-11 20:55:40,420 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:55:40,420 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53506
+[ INFO] 2019-03-11 20:55:40,420 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53507|)
+
+[ INFO] 2019-03-11 20:55:40,421 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:55:40,472 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:55:40,472 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53507
+[ INFO] 2019-03-11 20:55:40,472 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:55:40,472 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:55:41,099 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:56:53,348 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:56:53,365 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:56:53,366 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:56:53,367 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:56:53,368 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:56:53,368 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:56:53,368 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:56:53,368 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:56:53,369 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:56:53,369 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:56:53,369 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:56:53,370 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53513|)
+
+[ INFO] 2019-03-11 20:56:53,370 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:56:53,370 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53513
+[ INFO] 2019-03-11 20:56:53,370 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53514|)
+
+[ INFO] 2019-03-11 20:56:53,371 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:56:53,422 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:56:53,422 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53514
+[ INFO] 2019-03-11 20:56:53,422 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:56:53,422 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:56:53,896 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:57:23,956 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:57:23,956 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:57:23,957 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:57:23,958 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:57:23,959 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:57:23,959 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:57:23,959 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:57:23,959 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:57:23,960 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:57:23,960 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:57:23,960 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:57:23,961 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53518|)
+
+[ INFO] 2019-03-11 20:57:23,961 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:57:23,961 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53518
+[ INFO] 2019-03-11 20:57:23,961 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53519|)
+
+[ INFO] 2019-03-11 20:57:23,962 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:57:24,013 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:57:24,013 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53519
+[ INFO] 2019-03-11 20:57:24,013 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:57:24,014 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:57:24,481 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 20:58:38,884 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 20:58:38,884 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 20:58:38,885 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 20:58:38,886 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 20:58:38,886 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 20:58:38,886 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 20:58:38,887 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 20:58:38,887 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 20:58:38,887 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 20:58:38,887 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 20:58:38,887 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 20:58:38,888 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53524|)
+
+[ INFO] 2019-03-11 20:58:38,888 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 20:58:38,888 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53524
+[ INFO] 2019-03-11 20:58:38,889 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53525|)
+
+[ INFO] 2019-03-11 20:58:38,890 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 20:58:38,941 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 20:58:38,941 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53525
+[ INFO] 2019-03-11 20:58:38,941 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 20:58:38,941 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 20:58:39,421 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 21:01:31,860 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 21:01:31,860 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 21:01:31,861 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 21:01:31,862 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 21:01:31,862 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 21:01:31,863 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 21:01:31,863 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 21:01:31,863 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 21:01:31,863 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 21:01:31,863 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 21:01:31,864 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 21:01:31,864 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53533|)
+
+[ INFO] 2019-03-11 21:01:31,864 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 21:01:31,864 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53533
+[ INFO] 2019-03-11 21:01:31,865 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53534|)
+
+[ INFO] 2019-03-11 21:01:31,866 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 21:01:31,917 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 21:01:31,917 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53534
+[ INFO] 2019-03-11 21:01:31,917 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 21:01:31,917 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 21:01:32,436 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 21:02:27,529 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 21:02:27,530 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 21:02:27,531 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 21:02:27,531 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 21:02:27,532 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 21:02:27,532 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 21:02:27,532 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 21:02:27,532 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 21:02:27,533 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 21:02:27,533 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 21:02:27,533 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 21:02:27,533 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53542|)
+
+[ INFO] 2019-03-11 21:02:27,534 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 21:02:27,534 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53542
+[ INFO] 2019-03-11 21:02:27,534 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53543|)
+
+[ INFO] 2019-03-11 21:02:27,535 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 21:02:27,586 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 21:02:27,586 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53543
+[ INFO] 2019-03-11 21:02:27,586 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 21:02:27,586 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 21:02:28,067 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 21:03:42,706 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 21:03:42,707 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 21:03:42,708 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 21:03:42,709 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 21:03:42,709 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 21:03:42,710 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 21:03:42,710 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 21:03:42,710 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 21:03:42,710 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 21:03:42,711 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 21:03:42,711 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 21:03:42,711 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53547|)
+
+[ INFO] 2019-03-11 21:03:42,712 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 21:03:42,712 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53547
+[ INFO] 2019-03-11 21:03:42,712 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53548|)
+
+[ INFO] 2019-03-11 21:03:42,713 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 21:03:42,764 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 21:03:42,764 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53548
+[ INFO] 2019-03-11 21:03:42,764 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 21:03:42,764 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 21:03:43,255 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 21:04:38,827 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 21:04:38,828 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 21:04:38,828 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 21:04:38,829 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 21:04:38,829 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 21:04:38,829 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 21:04:38,830 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 21:04:38,830 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 21:04:38,830 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 21:04:38,830 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 21:04:38,830 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 21:04:38,831 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53552|)
+
+[ INFO] 2019-03-11 21:04:38,831 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 21:04:38,831 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53552
+[ INFO] 2019-03-11 21:04:38,832 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53553|)
+
+[ INFO] 2019-03-11 21:04:38,833 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 21:04:38,884 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 21:04:38,884 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53553
+[ INFO] 2019-03-11 21:04:38,884 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 21:04:38,884 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 21:04:39,358 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 21:05:35,235 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 21:05:35,237 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 21:05:35,237 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 21:05:35,238 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 21:05:35,239 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 21:05:35,239 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 21:05:35,239 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 21:05:35,239 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 21:05:35,239 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 21:05:35,240 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 21:05:35,240 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 21:05:35,241 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53560|)
+
+[ INFO] 2019-03-11 21:05:35,241 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 21:05:35,241 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53560
+[ INFO] 2019-03-11 21:05:35,241 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53561|)
+
+[ INFO] 2019-03-11 21:05:35,243 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 21:05:35,294 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 21:05:35,294 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53561
+[ INFO] 2019-03-11 21:05:35,294 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 21:05:35,294 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-11 21:07:59,149 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-11 21:08:08,767 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-11 21:08:08,768 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-11 21:08:08,768 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-11 21:08:08,769 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-11 21:08:08,769 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-11 21:08:08,769 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-11 21:08:08,770 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-11 21:08:08,770 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-11 21:08:08,770 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-11 21:08:08,770 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-11 21:08:08,771 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-11 21:08:08,771 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53565|)
+
+[ INFO] 2019-03-11 21:08:08,771 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-11 21:08:08,771 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53565
+[ INFO] 2019-03-11 21:08:08,772 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53566|)
+
+[ INFO] 2019-03-11 21:08:08,773 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-11 21:08:08,825 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-11 21:08:08,825 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53566
+[ INFO] 2019-03-11 21:08:08,825 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-11 21:08:08,825 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
