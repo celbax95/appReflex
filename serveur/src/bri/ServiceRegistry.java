@@ -23,10 +23,11 @@ public class ServiceRegistry {
 		try {
 			URLClassLoader urlcl = new URLClassLoader(new URL[] { new URL(ftpURL) });
 
-			Class<?> c = urlcl.loadClass(cn);
+			Class<?> c = urlcl.loadClass(cn + ".Main");
 
 			if (verif(c)) {
 				servicesClasses.add(c);
+				c.getMethod("init", String.class).invoke(null, ftpURL);
 				System.out.println("Service ajouté !");
 			}
 
@@ -93,6 +94,12 @@ public class ServiceRegistry {
 			c.getMethod("toStringue");
 		} catch (Exception e) {
 			System.out.println("Pas de methode toStringue");
+			return false;
+		}
+		try {
+			c.getMethod("init", String.class);
+		} catch (Exception e) {
+			System.out.println("Pas de methode init avec parametre String");
 			return false;
 		}
 

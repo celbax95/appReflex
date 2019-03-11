@@ -65,11 +65,11 @@ class ServiceProg implements Runnable {
 			int choix = 1;
 			switch (choix){
 			case 1 :
-				out.println("##Entrez le nom de la classe a ajouter : ");
+				out.println("##Entrez le nom du package a ajouter : ");
 				out.println("");
 				String className = "";
 				className = in.readLine();
-				className = "examples.ServiceXML";
+				className = "inv";
 				if(className != "") {
 					ServiceRegistry.addService(u.getFtp(), className);
 					out.println("Service ajoute");

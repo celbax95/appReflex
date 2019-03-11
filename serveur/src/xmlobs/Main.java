@@ -1,4 +1,4 @@
-package examples;
+package xmlobs;
 
 import java.io.*;
 import java.net.*;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import bri.Service;
 
-public class ServiceXML implements Service {
+public class Main implements Service {
 
 	private class Balise {
 		private String name;
@@ -42,7 +42,7 @@ public class ServiceXML implements Service {
 
 	private final Socket client;
 
-	public ServiceXML(Socket socket) {
+	public Main(Socket socket) {
 		client = socket;
 	}
 
@@ -81,6 +81,10 @@ public class ServiceXML implements Service {
 			client.close();
 		} catch (IOException e) {
 		}
+	}
+
+	public static void init(String path) {
+
 	}
 
 	public static String toStringue() {

@@ -27,7 +27,14 @@ class ServiceAmat implements Runnable {
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 			out.println(ServiceRegistry.toStringue() + "##Tapez le numéro de service désiré : ");
 			out.println("");
-			int choix = Integer.parseInt(in.readLine());
+			int choix = 0;
+			do {
+				try {
+					choix = Integer.parseInt(in.readLine());
+				} catch (Exception e) {
+					continue;
+				}
+			} while (false);
 
 			Class<?> c = null;
 			Object o = null;
