@@ -77,11 +77,11 @@ class ServiceProg implements Runnable {
 				case 1 :
 					out.println("##Entrez le nom du package a ajouter : ");
 					out.println("");
-					String className = "";
-					className = in.readLine();
-					className = "inv";
-					if(className != "") {
-						ServiceRegistry.addService(u.getFtp(), className);
+					String pkgeName = "";
+					pkgeName = in.readLine();
+					pkgeName = "inv";
+					if(pkgeName != "") {
+						ServiceRegistry.addService(u.getFtp(), pkgeName);
 						out.println("##Service ajoute####");
 					}
 					break;

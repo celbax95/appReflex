@@ -20,11 +20,11 @@ public class ServiceRegistry {
 	// un Vector pour cette gestion est pratique
 
 	// ajoute une classe de service après contrôle de la norme BLTi
-	public static void addService(String ftpURL, String cn) {
+	public static void addService(String ftpURL, String packageName) {
 		try {
 			URLClassLoader urlcl = new URLClassLoader(new URL[] { new URL(ftpURL) });
 
-			Class<?> c = urlcl.loadClass(cn + ".Main");
+			Class<?> c = urlcl.loadClass(packageName + ".Main");
 
 			if (verif(c)) {
 				Method m = c.getMethod("init", String.class);
