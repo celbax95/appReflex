@@ -7,6 +7,7 @@ public class Balise {
 	private String name;
 	private Map<String, Balise> inners;
 	private Map<String, String> attributes;
+
 	private Balise upper;
 
 	public Balise(String name, Balise upper) {

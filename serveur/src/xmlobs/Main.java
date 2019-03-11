@@ -55,15 +55,12 @@ public class Main implements Service {
 		}
 	}
 
-	public static void init(String path) {
-		try {
-			URLClassLoader cl = new URLClassLoader(new URL[] { new URL(path) });
+	public static void init(String path) throws Exception {
+		URLClassLoader cl = new URLClassLoader(new URL[] { new URL(path) });
 
-			balise = cl.loadClass(Main.class.getPackage().getName() + "." + baliseClassName);
-			System.out.println("LOADED");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		balise = cl.loadClass(Main.class.getPackage().getName() + "." + baliseClassName);
+
+		balise.newInstance();
 	}
 
 	public static String toStringue() {
