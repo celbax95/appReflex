@@ -19,6 +19,19 @@ public class Main implements Service {
 		client = socket;
 	}
 
+	private Object analyse(String file) {
+		try {
+			Object b = balise.getConstructor(String.class, balise).newInstance("FILE", null);
+
+			file = file.trim();
+
+
+
+		} catch (Exception e) {
+		}
+		return null;
+	}
+
 	private Balise analyseXML(String file, Balise balise) {
 		return null;
 	}
@@ -39,6 +52,7 @@ public class Main implements Service {
 			out.println("");
 
 			String fileName = in.readLine();
+			fileName = "ftp://localhost:2121/test.xml";
 
 			URL u = new URL(fileName);
 			Scanner sc = new Scanner(u.openStream());
@@ -48,7 +62,11 @@ public class Main implements Service {
 				file += sc.nextLine();
 			}
 
-			Balise b = analyseXML(file, new Balise("root", null));
+			file = file.replaceAll("\t", "");
+
+			Object balises = analyse(file);
+
+			System.out.println(file);
 
 			client.close();
 		} catch (IOException e) {
@@ -59,8 +77,6 @@ public class Main implements Service {
 		URLClassLoader cl = new URLClassLoader(new URL[] { new URL(path) });
 
 		balise = cl.loadClass(Main.class.getPackage().getName() + "." + baliseClassName);
-
-		balise.newInstance();
 	}
 
 	public static String toStringue() {

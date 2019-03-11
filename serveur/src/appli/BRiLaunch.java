@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import bri.ServeurAmat;
 import bri.ServeurProg;
+import bri.ServiceRegistry;
 
 public class BRiLaunch {
 	private final static int PORT_PROG = 2000;
@@ -24,7 +25,9 @@ public class BRiLaunch {
 
 		new Thread(new ServeurProg(PORT_PROG)).start();
 		new Thread(new ServeurAmat(PORT_AMAT)).start();
+
 		String tmp = "ftp://localhost:2121/";
+		ServiceRegistry.addService(tmp, "xmlobs");
 		//examples.ServiceInversion
 	}
 }

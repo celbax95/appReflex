@@ -34,6 +34,7 @@ public class ServiceRegistry {
 					System.out.println("Service ajouté !");
 					return true;
 				} catch (Exception e) {
+					e.printStackTrace();
 					System.err.println("Mauvais chargement du service !");
 				}
 			}
