@@ -49390,3 +49390,91 @@ java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
 
 [ INFO] 2019-03-12 09:41:44,661 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
 
+[ INFO] 2019-03-12 09:45:42,487 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-12 09:45:50,329 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-12 09:45:50,329 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-12 09:45:50,330 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-12 09:45:50,330 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-12 09:45:50,331 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-12 09:45:50,331 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-12 09:45:50,331 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-12 09:45:50,331 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-12 09:45:50,331 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-12 09:45:50,332 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-12 09:45:50,332 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-12 09:45:50,333 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53816|)
+
+[ INFO] 2019-03-12 09:45:50,333 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-12 09:45:50,333 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53816
+[ INFO] 2019-03-12 09:45:50,333 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53817|)
+
+[ INFO] 2019-03-12 09:45:50,334 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-12 09:45:50,638 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-12 09:45:50,638 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53817
+[ INFO] 2019-03-12 09:45:50,638 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-12 09:45:50,638 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-12 09:46:33,206 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-12 09:46:43,289 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-12 09:46:43,289 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-12 09:46:43,290 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-12 09:46:43,292 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-12 09:46:43,292 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-12 09:46:43,292 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-12 09:46:43,292 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-12 09:46:43,293 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-12 09:46:43,293 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-12 09:46:43,293 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-12 09:46:43,294 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-12 09:46:43,294 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53830|)
+
+[ INFO] 2019-03-12 09:46:43,294 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-12 09:46:43,294 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53830
+[ INFO] 2019-03-12 09:46:43,294 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53831|)
+
+[ INFO] 2019-03-12 09:46:43,296 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-12 09:46:43,603 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-12 09:46:43,603 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53831
+[ INFO] 2019-03-12 09:46:43,603 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-12 09:46:43,603 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-12 09:47:20,499 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-12 09:47:31,353 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-12 09:47:31,353 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-12 09:47:31,354 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-12 09:47:31,355 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-12 09:47:31,355 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-12 09:47:31,356 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-12 09:47:31,356 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-12 09:47:31,356 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-12 09:47:31,356 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-12 09:47:31,356 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-12 09:47:31,357 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-12 09:47:31,357 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53853|)
+
+[ INFO] 2019-03-12 09:47:31,357 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-12 09:47:31,357 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53853
+[ INFO] 2019-03-12 09:47:31,358 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||53854|)
+
+[ INFO] 2019-03-12 09:47:31,359 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-12 09:47:31,670 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-12 09:47:31,670 [anonymous] [127.0.0.1] Releasing unreserved passive port: 53854
+[ INFO] 2019-03-12 09:47:31,670 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-12 09:47:31,670 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ INFO] 2019-03-12 09:47:43,467 [anonymous] [127.0.0.1] CLOSED

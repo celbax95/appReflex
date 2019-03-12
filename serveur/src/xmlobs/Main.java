@@ -4,6 +4,7 @@ import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.net.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -55,7 +56,7 @@ public class Main implements Service {
 			Map<String, String> attr = (Map<String, String>) balise.getMethod("getAttributes").invoke(b,
 					(Object[]) null);
 			@SuppressWarnings("unchecked")
-			Map<String, Object> inn = (Map<String, Object>) balise.getMethod("getInners").invoke(b, (Object[]) null);
+			List<Object> inn = (List<Object>) balise.getMethod("getInners").invoke(b, (Object[]) null);
 
 			file = file.substring(ind);
 
@@ -95,7 +96,7 @@ public class Main implements Service {
 					if (inf == 0) {
 						Object[] ret = analyse(file, b);
 						file = (String) ret[1];
-						inn.put(name, ret[0]);
+						inn.add(ret[0]);
 					} else {
 						String content = file.substring(0, inf).trim();
 						balise.getMethod("setContent", String.class).invoke(b, content);

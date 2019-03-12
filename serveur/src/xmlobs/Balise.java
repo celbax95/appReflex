@@ -1,11 +1,13 @@
 package xmlobs;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Balise {
 	private String name;
-	private Map<String, Object> inners;
+	private List<Object> inners;
 	private Map<String, String> attributes;
 
 	private String content;
@@ -15,8 +17,8 @@ public class Balise {
 	public Balise(String name, Balise upper) {
 		this.name = name;
 		this.upper = upper;
-		content = "";
-		this.inners = new HashMap<>();
+		this.content = "";
+		this.inners = new ArrayList<>();
 		this.attributes = new HashMap<>();
 	}
 
@@ -28,7 +30,8 @@ public class Balise {
 		return content;
 	}
 
-	public Map<String, Object> getInners() {
+
+	public List<Object> getInners() {
 		return inners;
 	}
 
@@ -48,7 +51,7 @@ public class Balise {
 		this.content = content;
 	}
 
-	public void setInners(Map<String, Object> inners) {
+	public void setInners(List<Object> inners) {
 		this.inners = inners;
 	}
 
@@ -63,7 +66,7 @@ public class Balise {
 	@Override
 	public String toString() {
 		String s = "";
-		for (Object b : inners.values()) {
+		for (Object b : inners) {
 			s += ((Balise) b).toString(1);
 		}
 		return s.substring(0, s.length() - 1);
@@ -82,17 +85,18 @@ public class Balise {
 			s += ")";
 		}
 		if (!content.equals("") || !inners.isEmpty()) {
-			s += " {\n";
+			s += " {";
 		}
 		if (!content.equals("")) {
 			for (int i = 0; i < in; i++)
-				s += "  ";
-			s += "\"" + content + "\"\n";
+				s += "    ";
+			s += "\n\"" + content + "\"";
 		}
 		if (!inners.isEmpty()) {
-			for (Object b : inners.values()) {
+			s += "\n";
+			for (Object b : inners) {
 				for (int i = 0; i < in; i++)
-					s += "  ";
+					s += "    ";
 				s += ((Balise) b).toString(in + 1);
 			}
 			for (int i = 1; i < in; i++)
