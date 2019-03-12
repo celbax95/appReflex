@@ -8,17 +8,24 @@ public class Balise {
 	private Map<String, Object> inners;
 	private Map<String, String> attributes;
 
+	private String content;
+
 	private Object upper;
 
 	public Balise(String name, Balise upper) {
 		this.name = name;
 		this.upper = upper;
+		content = "";
 		this.inners = new HashMap<>();
 		this.attributes = new HashMap<>();
 	}
 
 	public Map<String, String> getAttributes() {
 		return attributes;
+	}
+
+	public String getContent() {
+		return content;
 	}
 
 	public Map<String, Object> getInners() {
@@ -35,6 +42,10 @@ public class Balise {
 
 	public void setAttributes(Map<String, String> attributes) {
 		this.attributes = attributes;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public void setInners(Map<String, Object> inners) {
@@ -60,6 +71,7 @@ public class Balise {
 
 	private String toString(int in) {
 		String s = name;
+
 		if (!attributes.isEmpty()) {
 			s += "(";
 
@@ -69,8 +81,15 @@ public class Balise {
 			s = s.substring(0, s.length() - 2);
 			s += ")";
 		}
-		if (!inners.isEmpty()) {
+		if (!content.equals("") || !inners.isEmpty()) {
 			s += " {\n";
+		}
+		if (!content.equals("")) {
+			for (int i = 0; i < in; i++)
+				s += "  ";
+			s += "\"" + content + "\"\n";
+		}
+		if (!inners.isEmpty()) {
 			for (Object b : inners.values()) {
 				for (int i = 0; i < in; i++)
 					s += "  ";

@@ -27,12 +27,19 @@ public class Main implements Service {
 
 			int inf = 0, sup = 0, spa = 0, ssup = 0, ind = 0;
 
+			System.out.println("\" " + file + " \"");
+
 			inf = file.indexOf("<");
 			spa = file.indexOf(" ");
 			sup = file.indexOf(">");
 			ssup = file.indexOf("/>");
 
-			if (inf > sup || inf > ssup)
+			ind = file.length();
+			spa = spa < 0 ? ind : spa;
+			sup = sup < 0 ? ind : sup;
+			ssup = ssup < 0 ? ind : ssup;
+
+			if (inf < 0 || (inf > sup) || (inf > ssup))
 				System.out.println("ERREUR");
 
 			// Get smaller
@@ -69,8 +76,11 @@ public class Main implements Service {
 
 				file = file.substring(ind + 1).trim();
 
+				ind = file.length();
 				sup = file.indexOf(">");
 				ssup = file.indexOf("/>");
+				sup = sup < 0 ? ind : sup;
+				ssup = ssup < 0 ? ind : ssup;
 
 				if (sup == 0 || ssup == 0)
 					bool = false;
@@ -88,6 +98,7 @@ public class Main implements Service {
 						inn.put(name, ret[0]);
 					} else {
 						String content = file.substring(0, inf).trim();
+						balise.getMethod("setContent", String.class).invoke(b, content);
 						file = file.substring(inf);
 					}
 				}
