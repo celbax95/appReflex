@@ -51,12 +51,18 @@ public class ServiceRegistry {
 
 	// liste les activités présentes
 	public static String toStringue() {
+		return toStringue(null);
+	}
+
+	// liste les activités présentes pour un auteur
+	public static String toStringue(String auteur) {
 		String result = "Activités présentes :####";
 		for (int i = 0; i < services.size(); i++) {
 			try {
-				result += "    " + (i + 1) + " - "
-						+ services.get(i).getService().getMethod("toStringue").invoke(null, (Object[]) null)
-						+ "##";
+				if (auteur == null || services.get(i).getAuteur() == auteur) {
+					result += "    " + (i + 1) + " - "
+							+ services.get(i).getService().getMethod("toStringue").invoke(null, (Object[]) null) + "##";
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
