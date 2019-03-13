@@ -13,13 +13,39 @@ class ServiceProg implements Runnable {
 
 	private Socket client;
 
+	private Utilisateur u;
+
 	ServiceProg(Socket socket) {
 		client = socket;
+		u = null;
 	}
 
 	@Override
 	protected void finalize() throws Throwable {
 		client.close();
+	}
+
+	private void majService() throws Exception {
+		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+
+		out.println("##" + ServiceRegistry.toStringue(u.getLogin()) + "##Quel service voulez vous mettre a jour ? : ");
+		out.println("");
+		int choix = 0;
+		boolean b = false;
+		while (!b) {
+			try {
+				choix = Integer.parseInt(in.readLine());
+				b = true;
+			} catch (Exception e) {
+				out.println("");
+			}
+		}
+		out.println("Mise a jour du service...####");
+		if (ServiceRegistry.majService(choix, u.getFtp()))
+			out.println("Service mis a jour !####");
+		else
+			out.println("Echec de la mise a jour");
 	}
 
 	@Override
@@ -28,7 +54,6 @@ class ServiceProg implements Runnable {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
-			Utilisateur u = null;
 			do {
 				String login = "", password = "";
 
@@ -85,6 +110,13 @@ class ServiceProg implements Runnable {
 							out.println("##Service ajoute####");
 						else
 							out.println("##Erreur d'ajout du service####");
+					}
+					break;
+				case 2:
+					try {
+						majService();
+					} catch (Exception e) {
+						e.printStackTrace();
 					}
 					break;
 				default:

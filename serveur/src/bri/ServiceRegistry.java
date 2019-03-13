@@ -3,6 +3,7 @@ package bri;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -47,6 +48,35 @@ public class ServiceRegistry {
 	// renvoie la classe de service (numService -1)
 	public static Class getServiceClass(int numService) {
 		return services.get(numService - 1).getService();
+	}
+
+	@SuppressWarnings("resource")
+	private static Class<?> loadService(String ftpURL, String packageName) throws Exception {
+		return (new URLClassLoader(new URL[] { new URL(ftpURL) })).loadClass(packageName + ".Main");
+	}
+
+	public static boolean majService(int choix, String ftpURL) {
+		try {
+			String packageName = services.get(choix).getService().getPackage().getName();
+
+			Class<?> c = loadService(ftpURL, packageName);
+
+			if (verif(c)) {
+				Method m = c.getMethod("init", String.class);
+				try {
+					m.invoke(null, ftpURL);
+					services.get(choix).setService(c);
+					System.out.println("Service mis a jour !");
+					return true;
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.err.println("Mauvais chargement du service !");
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	// liste les activités présentes
