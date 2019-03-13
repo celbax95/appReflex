@@ -20,7 +20,7 @@ class ServiceProg implements Runnable {
 		u = null;
 	}
 
-	private void addService() throws Exception {
+	private void addService() throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 		out.println("##Entrez le nom du package a ajouter : ");
@@ -37,12 +37,17 @@ class ServiceProg implements Runnable {
 
 	}
 
+	private void changeFTP() throws IOException {
+		// TODO Auto-generated method stub
+
+	}
+
 	@Override
 	protected void finalize() throws Throwable {
 		client.close();
 	}
 
-	private void majService() throws Exception {
+	private void majService() throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
@@ -113,22 +118,24 @@ class ServiceProg implements Runnable {
 						out.println("");
 					}
 				}
-				//				in.readLine();
-				//				int choix = 1;
-				switch (choix){
-				case 1 :
-					try {
-						addService();
-					} catch (Exception e1) {
-						e1.printStackTrace();
-					}
+				// in.readLine();
+				// int choix = 1;
+
+				switch (choix) {
+				case 1:
+					addService();
 					break;
 				case 2:
-					try {
-						majService();
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+					majService();
+					break;
+				case 3:
+					changeFTP();
+					break;
+				case 4:
+					uninstallService();
+					break;
+				case 5:
+					switchService();
 					break;
 				default:
 					exit = true;
@@ -150,6 +157,16 @@ class ServiceProg implements Runnable {
 	// lancement du service
 	public void start() {
 		(new Thread(this)).start();
+	}
+
+	private void switchService() throws IOException {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void uninstallService() throws IOException {
+		// TODO Auto-generated method stub
+
 	}
 
 }
