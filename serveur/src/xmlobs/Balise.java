@@ -73,6 +73,8 @@ public class Balise {
 	}
 
 	private String toString(int in) {
+		String space = "    ";
+
 		String s = name;
 
 		if (!attributes.isEmpty()) {
@@ -86,21 +88,22 @@ public class Balise {
 		}
 		if (!content.equals("") || !inners.isEmpty()) {
 			s += " {";
-		}
-		if (!content.equals("")) {
-			for (int i = 0; i < in; i++)
-				s += "    ";
-			s += "\n\"" + content + "\"";
-		}
-		if (!inners.isEmpty()) {
-			s += "\n";
-			for (Object b : inners) {
+			if (!content.equals("")) {
+				s += "\n";
 				for (int i = 0; i < in; i++)
-					s += "    ";
-				s += ((Balise) b).toString(in + 1);
+					s += space;
+				s += "\"" + content + "\"\n";
+			}
+			if (!inners.isEmpty()) {
+				s += "\n";
+				for (Object b : inners) {
+					for (int i = 0; i < in; i++)
+						s += space;
+					s += ((Balise) b).toString(in + 1);
+				}
 			}
 			for (int i = 1; i < in; i++)
-				s += "  ";
+				s += space;
 			s += "}";
 		}
 		return s + "\n";
