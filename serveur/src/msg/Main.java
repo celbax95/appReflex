@@ -7,7 +7,7 @@ import java.util.List;
 import bri.Service;
 
 public class Main implements Service {
-
+	
 	private static List<Object> messages;
 
 	private static List<Object> users;
@@ -17,9 +17,9 @@ public class Main implements Service {
 		users = new ArrayList<>();
 	}
 
-	private static String msgClassName = "Balise";
+	private static String msgClassName = "Message";
 	private static Class<?> msg;
-	private static String userClassName = "Balise";
+	private static String userClassName = "User";
 	private static Class<?> user;
 
 	private final Socket client;
@@ -30,6 +30,29 @@ public class Main implements Service {
 
 	private String connexion(String login, String pass) {
 		// TODO RECHERCHE DANS users ET RENVOIE login SI TROUVE, null SINON
+		boolean userFound = false;
+		for (Object u : users) {
+			if (((User) u).getLogin().equals(login) && ((User) u).getPass().equals(pass)) {
+				userFound = true;
+			}
+		}
+		if (userFound)
+			return login;
+		return null;
+	}
+	
+	//Surchage utilisé pour savoir si un destinataire
+	//est présent dans la base
+	private String connexion(String login) {
+		// TODO RECHERCHE DANS users ET RENVOIE login SI TROUVE, null SINON
+		boolean userFound = false;
+		for (Object u : users) {
+			if (((User) u).getLogin().equals(login)) {
+				userFound = true;
+			}
+		}
+		if (userFound)
+			return login;
 		return null;
 	}
 
@@ -40,34 +63,132 @@ public class Main implements Service {
 
 	private List<Object> getMsgFor(String login) {
 		// TODO PARCOURIR messages ET RENVOYER SEULEMENT CEUX POUR L'UTILISATEUR
+		List<Message> messageTmp = new ArrayList<>();
+		synchronized(messages) {
+			if (messages.size() > 0) {
+				for (Object m : messages) {
+					if(((Message) m).getExp().equals(login)) {
+						messageTmp.add((Message) m);
+					}
+				}
+				return messages;
+			}
 		return null;
+		}
 	}
 
 	@Override
 	public void run() {
 		try {
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+			BufferedReader clavier = new BufferedReader(new InputStreamReader(System.in));
 			PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
 			String login = "";
 			String pass = "";
-
-			// Connexion a un membre de users
-			login = connexion(login, pass);
-
-			/*
-			 * Menu - Consulter msg - Envoyer msg
-			 */
-
-			// Consulter msg
-			List<Object> msg = getMsgFor(login);
-
-			for (Object m : msg) {
-				out.println(m.toString() + "\n");
+			int choix;
+			boolean exit = false;
+			do {
+				out.println("1 - S'inscrire");
+				out.println("##");
+				out.println("2 - Se connecter");
+				out.println("##");
+				out.println("3 - Quitter");
+				out.println("##");
+				out.println("Choix : ");
+				out.println("");
+				choix = Integer.parseInt(in.readLine());
+				switch (choix) {
+					case 1 : 
+						out.println("Veuillez vous enregistrer : ");
+						out.println("##");
+						out.println("Login : ");
+						out.println("");
+						login = in.readLine();
+						out.println("##");
+						out.println("Password : ");
+						out.println("");
+						pass = in.readLine();
+						synchronized(users) {
+							users.add(new User(login, pass));
+						}
+						break;
+					case 2 : 
+						out.println("Veuillez entrer vos identifiants : ");
+						out.println("##");
+						out.println("Login : ");
+						out.println("");
+						login = in.readLine();
+						out.println("##");
+						out.println("Password : ");
+						out.println("");
+						pass = in.readLine();
+						// Connexion a un membre de users
+						login = connexion(login, pass);
+						if (login != null)
+							exit = true;
+						break;
+					case 3 : 
+						try {
+							client.close();
+						} catch (IOException e2) {
+						}
+						break;
+					default : 
+						out.println("Saisie invalide ! ");
+						out.println("##");
+						break;
+				}
+			}while(!exit);
+			
+			exit = false;
+			choix = 0;
+			String destinataire, objet, message;
+			List<Object> messagerie = getMsgFor(login);
+			do {
+				out.println("1 - Consulter message");
+				out.println("##");
+				out.println("2 - Envoyer message");
+				out.println("##");
+				out.println("3 - Deconnexion");
+				out.println("##");
+				switch (choix){
+					case 1 :
+						out.println("<=== Vos Messages ===>");
+						for (Object msg : messagerie) {
+							out.println(msg.toString());
+						}
+					case 2 :
+						out.println("Destinataire : ");
+						if ((destinataire = connexion(in.readLine())) != null) {
+							out.println("Objet : ");
+							out.println("##");
+							out.println("");
+							objet = in.readLine();
+							out.println("Message : ");
+							out.println("##");
+							out.println("");
+							message = in.readLine();
+							messages.add(new Message(login, objet, destinataire, message));
+						}
+					case 3 :
+						try {
+							client.close();
+						} catch (IOException e2) {
+						}
+						break;
+					default :
+						out.println("Saisie invalide ! ");
+						out.println("##");
+						break;
+				}
+			}while(!exit);
+			
+			try {
+				client.close();
+			} catch (IOException e2) {
 			}
 
-			// Envoyer msg recup expediteur, destinataire,objet, massage
-			// Ajouter a messages
 
 		} catch (IOException e) {
 		}
@@ -81,6 +202,6 @@ public class Main implements Service {
 	}
 
 	public static String toStringue() {
-		return "Analyse XML";
+		return "Messagerie";
 	}
 }

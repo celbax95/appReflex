@@ -28,6 +28,7 @@ public class BRiLaunch {
 
 		String tmp = "ftp://localhost:2121/";
 		ServiceRegistry.addService(tmp, "xmlobs");
+		ServiceRegistry.addService(tmp, "msg");
 		//examples.ServiceInversion
 	}
 }
