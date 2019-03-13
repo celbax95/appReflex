@@ -48,12 +48,11 @@ public class Message {
 
 	@Override
 	public String toString() {
-		// TODO AFFICHAGE DU MESSAGE
 		String UImessage = "";
 		UImessage += "- Expediteur : " + exp + "##" +
 					"- Destinataire : " + dest + "##" +
 					"- Objet : " + obj + "##" +
 					"- Message : " + msg + "##";
-		return super.toString();
+		return UImessage;
 	}
 }
