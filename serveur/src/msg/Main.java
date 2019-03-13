@@ -63,18 +63,15 @@ public class Main implements Service {
 
 	private List<Object> getMsgFor(String login) {
 		// TODO PARCOURIR messages ET RENVOYER SEULEMENT CEUX POUR L'UTILISATEUR
-		List<Message> messageTmp = new ArrayList<>();
-		synchronized(messages) {
+		List<Object> messageTmp = new ArrayList<>();
 			if (messages.size() > 0) {
 				for (Object m : messages) {
 					if(((Message) m).getExp().equals(login)) {
 						messageTmp.add((Message) m);
 					}
 				}
-				return messages;
 			}
-		return null;
-		}
+		return messageTmp;
 	}
 
 	@Override
@@ -89,6 +86,7 @@ public class Main implements Service {
 			int choix;
 			boolean exit = false;
 			do {
+				out.println("##");
 				out.println("1 - S'inscrire");
 				out.println("##");
 				out.println("2 - Se connecter");
@@ -142,25 +140,37 @@ public class Main implements Service {
 			}while(!exit);
 			
 			exit = false;
-			choix = 0;
 			String destinataire, objet, message;
 			List<Object> messagerie = getMsgFor(login);
 			do {
+				out.println("##");
 				out.println("1 - Consulter message");
 				out.println("##");
 				out.println("2 - Envoyer message");
 				out.println("##");
 				out.println("3 - Deconnexion");
 				out.println("##");
+				out.println("Choix : ");
+				out.println("");
+				choix = Integer.parseInt(in.readLine());
 				switch (choix){
 					case 1 :
 						out.println("<=== Vos Messages ===>");
-						for (Object msg : messagerie) {
-							out.println(msg.toString());
+						out.println("##");
+						if (messagerie.size() > 0) {
+							for (Object msg : messagerie) {
+								out.println(msg.toString());
+							}
+						}else {
+							out.println("Vous n'avez aucun message !");
+							out.println("##");
 						}
+						break;
 					case 2 :
 						out.println("Destinataire : ");
-						if ((destinataire = connexion(in.readLine())) != null) {
+						out.println("##");
+						out.println("");
+						if ((destinataire = connexion(in.readLine())).equals(null)) {
 							out.println("Objet : ");
 							out.println("##");
 							out.println("");
@@ -171,6 +181,7 @@ public class Main implements Service {
 							message = in.readLine();
 							messages.add(new Message(login, objet, destinataire, message));
 						}
+						break;
 					case 3 :
 						try {
 							client.close();
