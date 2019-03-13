@@ -2,8 +2,9 @@ package msg;
 
 import java.io.*;
 import java.net.*;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
+
 import bri.Service;
 
 public class Main implements Service {
@@ -13,8 +14,8 @@ public class Main implements Service {
 	private static List<Object> users;
 
 	static {
-		messages = new ArrayList<>();
-		users = new ArrayList<>();
+		messages = new Vector<>();
+		users = new Vector<>();
 	}
 
 	private static String msgClassName = "Message";
@@ -29,7 +30,6 @@ public class Main implements Service {
 	}
 
 	private String connexion(String login, String pass) {
-		// TODO RECHERCHE DANS users ET RENVOIE login SI TROUVE, null SINON
 		boolean userFound = false;
 		for (Object u : users) {
 			if (((User) u).getLogin().equals(login) && ((User) u).getPass().equals(pass)) {
@@ -41,10 +41,7 @@ public class Main implements Service {
 		return "";
 	}
 	
-	//Surchage utilisé pour savoir si un destinataire
-	//est présent dans la base
 	private String connexion(String login) {
-		// TODO RECHERCHE DANS users ET RENVOIE login SI TROUVE, null SINON
 		boolean userFound = false;
 		for (Object u : users) {
 			if (((User) u).getLogin().equals(login)) {
@@ -62,8 +59,7 @@ public class Main implements Service {
 	}
 
 	private List<Object> getMsgFor(String login) {
-		// TODO PARCOURIR messages ET RENVOYER SEULEMENT CEUX POUR L'UTILISATEUR
-		List<Object> messageTmp = new ArrayList<>();
+		List<Object> messageTmp = new Vector<>();
 			if (messages.size() > 0) {
 				for (Object m : messages) {
 					if(((Message) m).getDest().equals(login)) {
@@ -106,9 +102,7 @@ public class Main implements Service {
 						out.println("Password : ");
 						out.println("");
 						pass = in.readLine();
-						synchronized(users) {
-							users.add(new User(login, pass));
-						}
+						users.add(new User(login, pass));
 						break;
 					case 2 : 
 						out.println("Veuillez entrer vos identifiants : ");
@@ -119,7 +113,6 @@ public class Main implements Service {
 						out.println("Password : ");
 						out.println("");
 						pass = in.readLine();
-						// Connexion a un membre de users
 						login = connexion(login, pass);
 						if (login != null)
 							exit = true;
@@ -219,4 +212,5 @@ public class Main implements Service {
 	public static String toStringue() {
 		return "Messagerie";
 	}
+	
 }

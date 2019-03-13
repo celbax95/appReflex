@@ -54,7 +54,6 @@ class Application {
 		} catch (Exception e) {
 			System.err.println("Fin de la connexion");
 		}
-		// Refermer dans tous les cas la socket
 		try {
 			if (s != null)
 				s.close();
