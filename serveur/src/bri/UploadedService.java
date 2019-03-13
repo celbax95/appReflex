@@ -29,10 +29,12 @@ public class UploadedService {
 		this.service = service;
 	}
 
-	public void switchOn() {
-		if (on)
+	public int switchOnOff() {
+		if (on) {
 			on = false;
-		else
-			on = true;
+			return -1;
+		}
+		on = true;
+		return 1;
 	}
 }

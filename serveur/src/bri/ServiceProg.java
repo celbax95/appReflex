@@ -27,14 +27,13 @@ class ServiceProg implements Runnable {
 		out.println("");
 		String pkgeName = "";
 		pkgeName = in.readLine();
-		pkgeName = "xmlobs";
 		if(pkgeName != "") {
 			if (ServiceRegistry.addService(u.getFtp(), u.getLogin(), pkgeName))
-				out.println("##Service ajoute####");
+				out.println("##Service ajoute");
 			else
-				out.println("##Erreur d'ajout du service####");
+				out.println("##Erreur d'ajout du service");
 		}
-
+		out.println("####");
 	}
 
 	private void changeFTP() throws IOException {
@@ -70,9 +69,10 @@ class ServiceProg implements Runnable {
 		}
 		out.println("Mise a jour du service...####");
 		if (ServiceRegistry.majService(choix, u.getFtp()))
-			out.println("Service mis a jour !####");
+			out.println("Service mis a jour !");
 		else
 			out.println("Echec de la mise a jour");
+		out.println("####");
 	}
 
 	@Override
@@ -137,10 +137,10 @@ class ServiceProg implements Runnable {
 					changeFTP();
 					break;
 				case 4:
-					uninstallService();
+					switchService();
 					break;
 				case 5:
-					switchService();
+					uninstallService();
 					break;
 				default:
 					exit = true;
@@ -165,13 +165,58 @@ class ServiceProg implements Runnable {
 	}
 
 	private void switchService() throws IOException {
-		// TODO Auto-generated method stub
+		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
+		out.println(
+				"##" + ServiceRegistry.toStringue(u.getLogin()) + "##Quel service voulez vous demarrer / arreter ? : ");
+		out.println("");
+
+		int choix = 0;
+		boolean b = false;
+		while (!b) {
+			try {
+				choix = Integer.parseInt(in.readLine());
+				b = true;
+			} catch (Exception e) {
+				out.println("");
+			}
+		}
+
+		int res = ServiceRegistry.switchService(choix);
+		out.println("##");
+		if (res == 1)
+			out.println("Service allume");
+		else if (res == -1)
+			out.println("Service eteint");
+		else
+			out.println("Erreur");
+
+		out.println("####");
 	}
 
 	private void uninstallService() throws IOException {
-		// TODO Auto-generated method stub
+		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
+		out.println(
+				"##" + ServiceRegistry.toStringue(u.getLogin()) + "##Quel service voulez vous desinstaller ? : ");
+		out.println("");
+
+		int choix = 0;
+		boolean b = false;
+		while (!b) {
+			try {
+				choix = Integer.parseInt(in.readLine());
+				b = true;
+			} catch (Exception e) {
+				out.println("");
+			}
+		}
+		if (ServiceRegistry.uninstall(choix))
+			out.println("##Service desinstalle");
+		else
+			out.println("##Echec de la desinstallation");
+		out.println("####");
 	}
-
 }

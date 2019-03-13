@@ -56,8 +56,9 @@ public class ServiceRegistry {
 	}
 
 	public static boolean majService(int choix, String ftpURL) {
+		choix--;
 		try {
-			String packageName = services.get(choix).getService().getPackage().getName();
+			String packageName = services.get(choix - 1).getService().getPackage().getName();
 
 			Class<?> c = loadService(ftpURL, packageName);
 
@@ -79,25 +80,51 @@ public class ServiceRegistry {
 		return false;
 	}
 
+	public static int switchService(int choix) {
+		int i = 0;
+		try {
+			i = services.get(choix - 1).switchOnOff();
+		} catch (Exception e) {
+			return 0;
+		}
+		return i;
+	}
 	// liste les activités présentes
 	public static String toStringue() {
-		return toStringue(null);
+		return toStringue(null, true);
 	}
 
 	// liste les activités présentes pour un auteur
 	public static String toStringue(String auteur) {
+		return toStringue(auteur, false);
+	}
+
+	// liste les activités présentes pour un auteur
+	public static String toStringue(String auteur, boolean onlyOn) {
 		String result = "Activités présentes :####";
 		for (int i = 0; i < services.size(); i++) {
 			try {
-				if (auteur == null || services.get(i).getAuteur() == auteur) {
+				if ((auteur == null || services.get(i).getAuteur() == auteur) && (!onlyOn || services.get(i).isOn())) {
 					result += "    " + (i + 1) + " - "
-							+ services.get(i).getService().getMethod("toStringue").invoke(null, (Object[]) null) + "##";
+							+ services.get(i).getService().getMethod("toStringue").invoke(null, (Object[]) null);
+					if (!onlyOn)
+						result += " (" + (services.get(i).isOn() ? "ON" : "OFF") + ")";
+					result += "##";
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
 		return result;
+	}
+
+	public static boolean uninstall(int choix) {
+		try {
+			services.remove(choix-1);
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
 	}
 
 	private static boolean verif(Class<?> c) {
@@ -156,8 +183,6 @@ public class ServiceRegistry {
 			System.out.println("\nPas de methode init avec parametre String pouvant lever une Exception");
 			return false;
 		}
-
 		return true;
 	}
-
 }
