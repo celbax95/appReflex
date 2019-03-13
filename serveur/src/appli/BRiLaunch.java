@@ -27,8 +27,8 @@ public class BRiLaunch {
 		new Thread(new ServeurAmat(PORT_AMAT)).start();
 
 		String tmp = "ftp://localhost:2121/";
-		ServiceRegistry.addService(tmp, "xmlobs");
-		ServiceRegistry.addService(tmp, "msg");
+		ServiceRegistry.addService(tmp, "test", "xmlobs");
+		ServiceRegistry.addService(tmp, "test", "msg");
 		//examples.ServiceInversion
 	}
 }

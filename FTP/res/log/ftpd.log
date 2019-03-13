@@ -49569,3 +49569,71 @@ java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
 
 [ INFO] 2019-03-13 10:44:42,318 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
 
+[ INFO] 2019-03-13 10:49:42,465 [anonymous] [127.0.0.1] IDLE
+[ INFO] 2019-03-13 10:49:42,465 [anonymous] [127.0.0.1] Session idle, closing
+[ INFO] 2019-03-13 10:49:42,466 [anonymous] [127.0.0.1] CLOSED
+[ INFO] 2019-03-13 10:57:49,857 [] [127.0.0.1] CREATED
+[ INFO] 2019-03-13 10:57:49,857 [] [127.0.0.1] OPENED
+[ INFO] 2019-03-13 10:57:49,858 [] [127.0.0.1] SENT: 220 Service ready for new user.
+
+[ INFO] 2019-03-13 10:57:49,859 [] [127.0.0.1] RECEIVED: USER anonymous
+[ INFO] 2019-03-13 10:57:49,860 [anonymous] [127.0.0.1] SENT: 331 Guest login okay, send your complete e-mail address as password.
+
+[ INFO] 2019-03-13 10:57:49,860 [anonymous] [127.0.0.1] RECEIVED: PASS *****
+[ INFO] 2019-03-13 10:57:49,860 [anonymous] [127.0.0.1] Anonymous login success - Java1.8.0_181@
+[ INFO] 2019-03-13 10:57:49,861 [anonymous] [127.0.0.1] SENT: 230 User logged in, proceed.
+
+[ INFO] 2019-03-13 10:57:49,861 [anonymous] [127.0.0.1] RECEIVED: TYPE I
+[ INFO] 2019-03-13 10:57:49,862 [anonymous] [127.0.0.1] SENT: 200 Command TYPE okay.
+
+[ INFO] 2019-03-13 10:57:49,863 [anonymous] [127.0.0.1] RECEIVED: EPSV ALL
+[ INFO] 2019-03-13 10:57:49,864 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||56026|)
+
+[ INFO] 2019-03-13 10:57:49,864 [anonymous] [127.0.0.1] RECEIVED: EPSV
+[ WARN] 2019-03-13 10:57:49,865 [anonymous] [127.0.0.1] Releasing unreserved passive port: 56026
+[ INFO] 2019-03-13 10:57:49,866 [anonymous] [127.0.0.1] SENT: 229 Entering Passive Mode (|||56027|)
+
+[ INFO] 2019-03-13 10:57:49,867 [anonymous] [127.0.0.1] RECEIVED: RETR test.xml
+[ INFO] 2019-03-13 10:57:50,170 [anonymous] [127.0.0.1] File downloaded /test.xml
+[ WARN] 2019-03-13 10:57:50,172 [anonymous] [127.0.0.1] Releasing unreserved passive port: 56027
+[ INFO] 2019-03-13 10:57:50,172 [anonymous] [127.0.0.1] SENT: 150 File status okay; about to open data connection.
+
+[ INFO] 2019-03-13 10:57:50,172 [anonymous] [127.0.0.1] SENT: 226 Transfer complete.
+
+[ WARN] 2019-03-13 10:58:02,126 [anonymous] [127.0.0.1] EXCEPTION :
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ERROR] 2019-03-13 10:58:02,128 [anonymous] [127.0.0.1] Exception caught, closing session
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:317)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:683)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[ INFO] 2019-03-13 10:58:02,129 [anonymous] [127.0.0.1] CLOSED

@@ -11,16 +11,16 @@ import java.util.Vector;
 
 public class ServiceRegistry {
 	static {
-		servicesClasses = null;
+		services = null;
 	}
-	private static List<Class<?>> servicesClasses = new Vector<>();
+	private static List<UploadedService> services = new Vector<>();
 
 	// cette classe est un registre de services
 	// partagée en concurrence par les clients et les "ajouteurs" de services,
 	// un Vector pour cette gestion est pratique
 
 	// ajoute une classe de service après contrôle de la norme BLTi
-	public static boolean addService(String ftpURL, String packageName) {
+	public static boolean addService(String ftpURL, String auteur, String packageName) {
 		try {
 			URLClassLoader urlcl = new URLClassLoader(new URL[] { new URL(ftpURL) });
 
@@ -30,7 +30,7 @@ public class ServiceRegistry {
 				Method m = c.getMethod("init", String.class);
 				try {
 					m.invoke(null, ftpURL);
-					servicesClasses.add(c);
+					services.add(new UploadedService(auteur, c));
 					System.out.println("Service ajouté !");
 					return true;
 				} catch (Exception e) {
@@ -46,16 +46,16 @@ public class ServiceRegistry {
 
 	// renvoie la classe de service (numService -1)
 	public static Class getServiceClass(int numService) {
-		return servicesClasses.get(numService - 1);
+		return services.get(numService - 1).getService();
 	}
 
 	// liste les activités présentes
 	public static String toStringue() {
 		String result = "Activités présentes :####";
-		for (int i = 0; i < servicesClasses.size(); i++) {
+		for (int i = 0; i < services.size(); i++) {
 			try {
 				result += "    " + (i + 1) + " - "
-						+ servicesClasses.get(i).getMethod("toStringue").invoke(null, (Object[]) null)
+						+ services.get(i).getService().getMethod("toStringue").invoke(null, (Object[]) null)
 						+ "##";
 			} catch (Exception e) {
 				e.printStackTrace();

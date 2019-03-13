@@ -81,7 +81,7 @@ class ServiceProg implements Runnable {
 					pkgeName = in.readLine();
 					pkgeName = "xmlobs";
 					if(pkgeName != "") {
-						if (ServiceRegistry.addService(u.getFtp(), pkgeName))
+						if (ServiceRegistry.addService(u.getFtp(), u.getLogin(), pkgeName))
 							out.println("##Service ajoute####");
 						else
 							out.println("##Erreur d'ajout du service####");
