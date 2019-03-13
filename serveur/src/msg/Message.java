@@ -54,6 +54,6 @@ public class Message {
 					"- Destinataire : " + dest + "##" +
 					"- Objet : " + obj + "##" +
 					"- Message : " + msg + "##";
-		return super.toString();
+		return UImessage;
 	}
 }

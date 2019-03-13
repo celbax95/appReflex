@@ -38,7 +38,7 @@ public class Main implements Service {
 		}
 		if (userFound)
 			return login;
-		return null;
+		return "";
 	}
 	
 	//Surchage utilisé pour savoir si un destinataire
@@ -53,7 +53,7 @@ public class Main implements Service {
 		}
 		if (userFound)
 			return login;
-		return null;
+		return "";
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class Main implements Service {
 		List<Object> messageTmp = new ArrayList<>();
 			if (messages.size() > 0) {
 				for (Object m : messages) {
-					if(((Message) m).getExp().equals(login)) {
+					if(((Message) m).getDest().equals(login)) {
 						messageTmp.add((Message) m);
 					}
 				}
@@ -83,7 +83,7 @@ public class Main implements Service {
 
 			String login = "";
 			String pass = "";
-			int choix;
+			int choix = 0;
 			boolean exit = false;
 			do {
 				out.println("##");
@@ -92,7 +92,7 @@ public class Main implements Service {
 				out.println("2 - Se connecter");
 				out.println("##");
 				out.println("3 - Quitter");
-				out.println("##");
+				out.println("####");
 				out.println("Choix : ");
 				out.println("");
 				choix = Integer.parseInt(in.readLine());
@@ -103,7 +103,6 @@ public class Main implements Service {
 						out.println("Login : ");
 						out.println("");
 						login = in.readLine();
-						out.println("##");
 						out.println("Password : ");
 						out.println("");
 						pass = in.readLine();
@@ -117,7 +116,6 @@ public class Main implements Service {
 						out.println("Login : ");
 						out.println("");
 						login = in.readLine();
-						out.println("##");
 						out.println("Password : ");
 						out.println("");
 						pass = in.readLine();
@@ -149,17 +147,20 @@ public class Main implements Service {
 				out.println("2 - Envoyer message");
 				out.println("##");
 				out.println("3 - Deconnexion");
-				out.println("##");
+				out.println("####");
 				out.println("Choix : ");
 				out.println("");
 				choix = Integer.parseInt(in.readLine());
+				out.println("##");
 				switch (choix){
 					case 1 :
 						out.println("<=== Vos Messages ===>");
 						out.println("##");
+						 messagerie = getMsgFor(login);
 						if (messagerie.size() > 0) {
 							for (Object msg : messagerie) {
 								out.println(msg.toString());
+								out.println("##");
 							}
 						}else {
 							out.println("Vous n'avez aucun message !");
@@ -168,18 +169,21 @@ public class Main implements Service {
 						break;
 					case 2 :
 						out.println("Destinataire : ");
-						out.println("##");
 						out.println("");
-						if ((destinataire = connexion(in.readLine())).equals(null)) {
-							out.println("Objet : ");
+						if (!(destinataire = connexion(in.readLine())).equals("")) {
 							out.println("##");
+							out.println("Objet : ");
 							out.println("");
 							objet = in.readLine();
-							out.println("Message : ");
 							out.println("##");
+							out.println("Message : ");
 							out.println("");
 							message = in.readLine();
+							out.println("##");
 							messages.add(new Message(login, objet, destinataire, message));
+						}else {
+							out.println("Destinataire inexistant dans la base !");
+							out.println("##");
 						}
 						break;
 					case 3 :
