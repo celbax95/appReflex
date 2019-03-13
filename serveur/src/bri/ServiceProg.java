@@ -38,8 +38,13 @@ class ServiceProg implements Runnable {
 	}
 
 	private void changeFTP() throws IOException {
-		// TODO Auto-generated method stub
+		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
+		out.println("##Veuillez taper l'adresse de votre nouveau serveur FTP : ");
+		out.println("");
+		u.setFtp(in.readLine());
+		out.println("##Votre nouvelle adresse FTP est : " + u.getFtp() + "####");
 	}
 
 	@Override
