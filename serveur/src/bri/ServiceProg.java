@@ -20,6 +20,23 @@ class ServiceProg implements Runnable {
 		u = null;
 	}
 
+	private void addService() throws Exception {
+		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+		out.println("##Entrez le nom du package a ajouter : ");
+		out.println("");
+		String pkgeName = "";
+		pkgeName = in.readLine();
+		pkgeName = "xmlobs";
+		if(pkgeName != "") {
+			if (ServiceRegistry.addService(u.getFtp(), u.getLogin(), pkgeName))
+				out.println("##Service ajoute####");
+			else
+				out.println("##Erreur d'ajout du service####");
+		}
+
+	}
+
 	@Override
 	protected void finalize() throws Throwable {
 		client.close();
@@ -100,16 +117,10 @@ class ServiceProg implements Runnable {
 				//				int choix = 1;
 				switch (choix){
 				case 1 :
-					out.println("##Entrez le nom du package a ajouter : ");
-					out.println("");
-					String pkgeName = "";
-					pkgeName = in.readLine();
-					pkgeName = "xmlobs";
-					if(pkgeName != "") {
-						if (ServiceRegistry.addService(u.getFtp(), u.getLogin(), pkgeName))
-							out.println("##Service ajoute####");
-						else
-							out.println("##Erreur d'ajout du service####");
+					try {
+						addService();
+					} catch (Exception e1) {
+						e1.printStackTrace();
 					}
 					break;
 				case 2:
