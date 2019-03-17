@@ -87,11 +87,9 @@ class ServiceProg implements Runnable {
 				out.println("##Login : ");
 				out.println("");
 				login = in.readLine();
-				login = "test";
 				out.println("Password : ");
 				out.println("");
 				password = in.readLine();
-				password = "test";
 
 				u = BDDUtilisateurs.connect(login, password);
 
@@ -123,8 +121,6 @@ class ServiceProg implements Runnable {
 						out.println("");
 					}
 				}
-				// in.readLine();
-				// int choix = 1;
 
 				switch (choix) {
 				case 1:
